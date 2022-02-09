@@ -50,12 +50,12 @@ body {
 }
 
 .page-container .header {
-  background-color: #ffe2e2;
-  height: 7.5vh;
+  background-color: var(--red-100);
+  min-height: 5vh;
   padding: 1rem;
 }
 .page-container .content {
-  background-color: #daffdc;
+  background-color: var(--green-100);
   padding: 1rem;
   flex-grow: 2;
 
@@ -64,9 +64,9 @@ body {
   flex-direction: column;
 }
 .page-container .footer {
-  background-color: #e5e4ff;
+  background-color: var(--blue-100);
   padding: 1rem;
-  height: 7.5vh;
+  min-height: 5vh;
 }
 /* -- END STRUCTURAL LAYOUT -- */
 
@@ -76,6 +76,22 @@ body {
   flex-direction: row;
   padding: 0.5rem 0rem;
 }
+
+/* --- START 12 COLUMNS --- */
+.row.row-full {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "col-12";
+}
+
+.row-full .col-12 {
+  grid-area: col-12;
+  background-color: var(--red-100);
+}
+/* --- END 12 COLUMNS --- */
 
 /* --- START 6-6 COLUMNS --- */
 .row .col-6-6 {
@@ -232,3 +248,292 @@ body {
 /* -- END COLUMN LAYOUTS -- */
 
 /* - END PAGE LAYOUT - */
+
+/* - START UTILITY CLASSES - */
+
+/* - START ALIGNMENT/JUSTIFICATION UTILITY CLASSES - */
+.col-12-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fljc-center {
+  justify-content: center;
+}
+
+.fljc-sp-around {
+  justify-content: space-around;
+}
+
+.fljc-sp-between {
+  justify-content: space-between;
+}
+
+.fljc-sp-evenly {
+  justify-content: space-evenly;
+}
+
+.fljc-fl-start {
+  justify-content: flex-start;
+}
+
+.fljc-fl-end {
+  justify-content: flex-end;
+}
+/* - END ALIGNMENT/JUSTIFICATION UTILITY CLASSES - */
+
+/* -- START WIDTH CLASSES -- */
+.w-100 {
+  width: 100%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-5 {
+  width: 100%;
+}
+.w-4 {
+  width: 80%;
+}
+.w-3 {
+  width: 60%;
+}
+.w-2 {
+  width: 40%;
+}
+.w-1 {
+  width: 20%;
+}
+/* -- END WIDTH CLASSES -- */
+
+/* -- START MARGIN CLASSES -- */
+
+/* --- START ALL-SIDE MARGIN CLASSES --- */
+.m-010 {
+  margin: 0.1rem;
+}
+.m-020 {
+  margin: 0.2rem;
+}
+.m-025 {
+  margin: 0.25rem;
+}
+.m-050 {
+  margin: 0.5rem;
+}
+.m-075 {
+  margin: 0.75rem;
+}
+.m-100 {
+  margin: 1rem;
+}
+.m-125 {
+  margin: 1.25rem;
+}
+.m-150 {
+  margin: 1.5rem;
+}
+.m-200 {
+  margin: 2rem;
+}
+/* --- END ALL-SIDE MARGIN CLASSES --- */
+
+/* --- START TOP-BOTTOM MARGIN CLASSES --- */
+.mtb-010 {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+.mtb-020 {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.mtb-025 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.mtb-050 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.mtb-075 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.mtb-100 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.mtb-125 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.mtb-150 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.mtb-200 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+/* --- END TOP-BOTTOM MARGIN CLASSES --- */
+
+/* --- START LEFT-RIGHT MARGIN CLASSES --- */
+.mlr-010 {
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+}
+.mlr-020 {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+.mlr-025 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.mlr-050 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.mlr-075 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+.mlr-100 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.mlr-125 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+.mlr-150 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.mlr-200 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+/* --- END LEFT-RIGHT MARGIN CLASSES --- */
+
+/* -- END MARGIN CLASSES -- */
+
+/* -- START PADDING CLASSES -- */
+
+/* --- START ALL-SIDE PADDING CLASSES --- */
+.p-010 {
+  padding: 0.1rem;
+}
+.p-020 {
+  padding: 0.2rem;
+}
+.p-025 {
+  padding: 0.25rem;
+}
+.p-050 {
+  padding: 0.5rem;
+}
+.p-075 {
+  padding: 0.75rem;
+}
+.p-100 {
+  padding: 1rem;
+}
+.p-125 {
+  padding: 1.25rem;
+}
+.p-150 {
+  padding: 1.5rem;
+}
+.p-200 {
+  padding: 2rem;
+}
+/* --- END ALL-SIDE PADDING CLASSES --- */
+
+/* --- START TOP-BOTTOM PADDING CLASSES --- */
+.ptb-010 {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+.ptb-020 {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+.ptb-025 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.ptb-050 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.ptb-075 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.ptb-100 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.ptb-125 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.ptb-150 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.ptb-200 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+/* --- END TOP-BOTTOM PADDING CLASSES --- */
+
+/* --- START LEFT-RIGHT PADDING CLASSES --- */
+.plr-010 {
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+}
+.plr-020 {
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+.plr-025 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.plr-050 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.plr-075 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.plr-100 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.plr-125 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.plr-150 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.plr-200 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+/* --- END LEFT-RIGHT PADDING CLASSES --- */
+
+/* -- END PADDING CLASSES -- */
+
+/* - END UTILITY CLASSES - */
