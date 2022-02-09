@@ -107,6 +107,17 @@ h6 {
   grid-area: col-12;
   background-color: var(--red-100);
 }
+
+.row.row-full-centered {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-full-centered .col-12 {
+  background-color: var(--red-100);
+}
 /* --- END 12 COLUMNS --- */
 
 /* --- START 6-6 COLUMNS --- */
@@ -268,9 +279,20 @@ h6 {
 /* - START UTILITY CLASSES - */
 
 /* -- START ALIGNMENT/JUSTIFICATION UTILITY CLASSES -- */
-.col-12-center {
+.full-height {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Vertical */
+  justify-content: center; /* Horizontal */
+}
+
+.col-12-hcenter {
   margin-left: auto;
   margin-right: auto;
+}
+.col-12-vcenter {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .text-center {
@@ -281,6 +303,16 @@ h6 {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.fl-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.fl-row {
+  display: flex;
+  flex-direction: row;
 }
 
 .fljc-center {
@@ -480,6 +512,15 @@ h6 {
 .p-200 {
   padding: 2rem;
 }
+.p-300 {
+  padding: 3rem;
+}
+.p-400 {
+  padding: 4rem;
+}
+.p-500 {
+  padding: 5rem;
+}
 /* --- END ALL-SIDE PADDING CLASSES --- */
 
 /* --- START TOP-BOTTOM PADDING CLASSES --- */
@@ -519,6 +560,18 @@ h6 {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.ptb-300 {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.ptb-400 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.ptb-500 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
 /* --- END TOP-BOTTOM PADDING CLASSES --- */
 
 /* --- START LEFT-RIGHT PADDING CLASSES --- */
@@ -557,6 +610,18 @@ h6 {
 .plr-200 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.plr-300 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.plr-400 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.plr-500 {
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 /* --- END LEFT-RIGHT PADDING CLASSES --- */
 
