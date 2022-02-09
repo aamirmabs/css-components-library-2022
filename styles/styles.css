@@ -5,3 +5,31 @@
 body {
   background-color: inherit;
 }
+
+/* - START PAGE LAYOUT - */
+
+/* -- START STRUCTURAL LAYOUT -- */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-container .header {
+  background-color: #ffe2e2;
+  height: 7.5vh;
+  padding: 1rem;
+}
+.page-container .content {
+  background-color: #daffdc;
+  padding: 1rem;
+  flex-grow: 2;
+}
+.page-container .footer {
+  background-color: #e5e4ff;
+  padding: 1rem;
+  height: 7.5vh;
+}
+/* -- END STRUCTURAL LAYOUT -- */
+
+/* - END PAGE LAYOUT - */
