@@ -38,6 +38,11 @@
   /* fonts */
   --body-font: "Roboto Slab", serif;
   --heading-font: "Montserrat", sans-serif;
+
+  /* transition timing */
+  --transition-fast: all 100ms ease-in-out;
+  --transition-medium: all 300ms ease-in-out;
+  --transition-slow: all 500ms ease-in-out;
 }
 
 body {
@@ -662,7 +667,7 @@ h6 {
 .main-menu .main-menu-item {
   padding: 0rem 0.5rem;
   padding-bottom: 0.25rem;
-  transition: all 300ms ease-in-out;
+  transition: var(--transition-medium);
 }
 
 .main-menu .main-menu-item:hover {
@@ -674,3 +679,41 @@ h6 {
 }
 
 /* - END HEADER CSS - */
+
+/* - START SIDE-MENU CSS - */
+.content .side-menu {
+  font-family: var(--heading-font);
+  color: var(--black);
+}
+
+.side-menu .heading {
+  font: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+}
+
+.side-menu .sub-heading {
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+}
+
+.side-menu .item {
+  font: inherit;
+  padding-left: 0.5rem;
+  font-weight: 300;
+  line-height: 1.4rem;
+  transition: var(--transition-medium);
+}
+
+.side-menu .item:hover {
+  color: var(--blue-900);
+}
+
+.item > a:link,
+.item > a:visited {
+  color: var(--black);
+}
+/* - END SIDE-MENU CSS - */
