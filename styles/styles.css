@@ -299,6 +299,15 @@ a:hover {
 
 /* - START UTILITY CLASSES - */
 
+/* -- START SYNTAX HIGHLIGHTING UTILITY CLASSES -- */
+.code-block {
+  width: 90%;
+  padding: 0.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* -- END SYNTAX HIGHLIGHTING UTILITY CLASSES -- */
+
 /* -- START ALIGNMENT/JUSTIFICATION UTILITY CLASSES -- */
 .full-height {
   display: flex;

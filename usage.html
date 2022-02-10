@@ -15,6 +15,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  <!-- prism css -->
+  <link rel="stylesheet" href="/styles/prism.css">
   <!-- custom css -->
   <link rel="stylesheet" href="./styles/reset.css" />
   <link rel="stylesheet" href="./styles/styles.css" />
@@ -104,7 +106,22 @@
               </div>
             </div>
           </div>
-          <div class="col-9">Content</div>
+          <div class="col-9">
+            <h1>Usage</h1>
+            <p>To start using the components in your project import the
+              stylesheet in your css or html file.
+            </p>
+            <div class="code-block">
+              <pre><code class="language-html">
+              @import url("https://eule.netlify.app/xyz");
+              &lt;link rel="stylesheet" href="https://eule.netlify.app/xyz"&gt;
+            </code></pre>
+            </div>
+            <p>You can also import individual components if you only need a few
+              of them. The
+              links to import individual components can be found in their
+              respective pages.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -113,6 +130,8 @@
       <h1>Footer</h1>
     </div>
   </div>
+  <!-- syntax highlighting -->
+  <script src="/scripts/prism.js"></script>
   <!-- connecting javascript files -->
   <script src="./scripts/script.js"></script>
 </body>
