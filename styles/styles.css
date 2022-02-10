@@ -368,6 +368,50 @@ a:hover {
 .fljc-fl-end {
   justify-content: flex-end;
 }
+
+.flac-center {
+  align-content: center;
+}
+
+.flac-sp-around {
+  align-content: space-around;
+}
+
+.flac-sp-between {
+  align-content: space-between;
+}
+
+.flac-fl-start {
+  align-content: flex-start;
+}
+
+.flac-fl-end {
+  align-content: flex-end;
+}
+
+.flas-auto {
+  align-self: auto;
+}
+
+.flas-fl-start {
+  align-self: flex-start;
+}
+
+.flas-fl-end {
+  align-self: flex-end;
+}
+
+.flas-center {
+  align-self: center;
+}
+
+.flas-baseline {
+  align-self: baseline;
+}
+
+.flas-stretch {
+  align-self: stretch;
+}
 /* -- END ALIGNMENT/JUSTIFICATION UTILITY CLASSES -- */
 
 /* -- START WIDTH CLASSES -- */
@@ -739,7 +783,35 @@ a:hover {
 }
 
 .side-menu .item.active {
-  /* border-bottom: 2px solid var(--blue-900); */
   text-decoration: underline;
 }
 /* - END SIDE-MENU CSS - */
+
+/* - START AVATAR COMPONENT - */
+.avatar {
+  display: block;
+  padding: 0.25rem;
+  align-self: center;
+}
+
+.avatar img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.avatar-xs {
+  width: 2rem;
+}
+.avatar-s {
+  width: 2.75rem;
+}
+.avatar-m {
+  width: 3.25rem;
+}
+.avatar-l {
+  width: 3.75rem;
+}
+.avatar-xl {
+  width: 4.25rem;
+}
+/* - END AVATAR COMPONENT - */
