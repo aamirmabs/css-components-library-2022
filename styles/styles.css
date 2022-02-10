@@ -1,7 +1,817 @@
 :root {
+  /* color pallettes */
   --red: #e44343;
+  --red-100: #facbcb;
+  --red-300: #e77777;
+  --red-500: #e44343;
+  --red-700: #a11e1e;
+  --red-900: #751313;
+
+  --green: #2fc769;
+  --green-100: #c1f7d5;
+  --green-300: #69e699;
+  --green-500: #2fc769;
+  --green-700: #128d41;
+  --green-900: #045523;
+
+  --blue: #2f71c7;
+  --blue-100: #c4dcfa;
+  --blue-300: #6399e0;
+  --blue-500: #2f71c7;
+  --blue-700: #164f99;
+  --blue-900: #08336b;
+
+  --white: #f3f3f3;
+  --white-100: #ffffff;
+  --white-300: #fafafa;
+  --white-500: #f3f3f3;
+  --white-700: #e9e9e9;
+  --white-900: #eeeeee;
+
+  --black: #101010;
+  --black-100: #202020;
+  --black-300: #191919;
+  --black-500: #101010;
+  --black-700: #060606;
+  --black-900: #0a0a0a;
+
+  /* fonts */
+  --body-font: "Roboto Slab", serif;
+  --heading-font: "Montserrat", sans-serif;
+
+  /* transition timing */
+  --transition-fast: all 100ms ease-in-out;
+  --transition-medium: all 300ms ease-in-out;
+  --transition-slow: all 500ms ease-in-out;
 }
 
 body {
   background-color: inherit;
+  font-family: var(--body-font);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+a {
+  cursor: pointer;
+  color: var(--blue-900);
+  transition: var(--transition-medium);
+}
+
+a:link,
+a:visited {
+  color: var(--black);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue-700);
+}
+
+/* - START PAGE LAYOUT - */
+
+/* -- START STRUCTURAL LAYOUT -- */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-container .header {
+  background-color: var(--red-100);
+  min-height: 5vh;
+  font-family: var(--heading-font);
+  padding: 1rem;
+}
+.page-container .content {
+  background-color: var(--green-100);
+  padding: 1rem;
+  flex-grow: 2;
+
+  /* styles for rows and columns */
+  display: flex;
+  flex-direction: column;
+}
+.page-container .footer {
+  background-color: var(--blue-100);
+  padding: 1rem;
+  min-height: 5vh;
+  font-family: var(--heading-font);
+}
+/* -- END STRUCTURAL LAYOUT -- */
+
+/* -- START COLUMN LAYOUTS -- */
+.content .row {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 0rem;
+}
+
+/* --- START 12 COLUMNS --- */
+.row.row-full {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "col-12";
+}
+
+.row-full .col-12 {
+  grid-area: col-12;
+  background-color: var(--red-100);
+}
+
+.row.row-full-centered {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-full-centered .col-12 {
+  background-color: var(--red-100);
+}
+/* --- END 12 COLUMNS --- */
+
+/* --- START 6-6 COLUMNS --- */
+.row .col-6-6 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "col-6-1 col-6-2";
+}
+
+.col-6-6 .col-6-1 {
+  grid-area: col-6-1;
+  background-color: var(--red-100);
+}
+.col-6-6 .col-6-2 {
+  grid-area: col-6-2;
+  background-color: var(--blue-100);
+}
+/* --- END 6-6 COLUMNS --- */
+
+/* --- START 4-8 COLUMNS --- */
+.row .col-4-8 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "col-4 col-8";
+}
+
+.col-4-8 .col-4 {
+  grid-area: col-4;
+  background-color: var(--red-100);
+}
+.col-4-8 .col-8 {
+  grid-area: col-8;
+  background-color: var(--blue-100);
+}
+/* --- END 4-8 COLUMNS --- */
+
+/* --- START 8-4 COLUMNS --- */
+.row .col-8-4 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "col-8 col-4";
+}
+
+.col-8-4 .col-4 {
+  grid-area: col-4;
+  background-color: var(--blue-100);
+}
+.col-8-4 .col-8 {
+  grid-area: col-8;
+  background-color: var(--red-100);
+}
+/* --- END 4-8 COLUMNS --- */
+
+/* --- START 3-9 COLUMNS --- */
+.row .col-3-9 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "col-3 col-9";
+}
+
+.col-3-9 .col-3 {
+  grid-area: col-3;
+  background-color: var(--red-100);
+}
+.col-3-9 .col-9 {
+  grid-area: col-9;
+  background-color: var(--blue-100);
+}
+/* --- END 3-9 COLUMNS --- */
+
+/* --- START 9-3 COLUMNS --- */
+.row .col-9-3 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "col-9 col-3";
+}
+
+.col-9-3 .col-3 {
+  grid-area: col-3;
+  background-color: var(--blue-100);
+}
+.col-9-3 .col-9 {
+  grid-area: col-9;
+  background-color: var(--red-100);
+}
+/* --- END 3-9 COLUMNS --- */
+
+/* --- START 2-8-2 COLUMNS --- */
+.row .col-2-8-2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "col-2-1 col-8 col-2-2";
+}
+
+.col-2-8-2 .col-2-1 {
+  grid-area: col-2-1;
+  background-color: var(--red-100);
+}
+
+.col-2-8-2 .col-8 {
+  grid-area: col-8;
+  background-color: var(--blue-100);
+}
+
+.col-2-8-2 .col-2-2 {
+  grid-area: col-2-2;
+  background-color: var(--red-100);
+}
+/* --- END 2-8-2 COLUMNS --- */
+
+/* --- START 4-4-4 COLUMNS --- */
+.row .col-4-4-4 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "col-4-1 col-4-2 col-4-3";
+}
+
+.col-4-4-4 .col-4-1 {
+  grid-area: col-4-1;
+  background-color: var(--red-100);
+}
+
+.col-4-4-4 .col-4-2 {
+  grid-area: col-4-2;
+  background-color: var(--blue-100);
+}
+
+.col-4-4-4 .col-4-3 {
+  grid-area: col-4-3;
+  background-color: var(--red-100);
+}
+/* --- END 4-4-4 COLUMNS --- */
+
+/* -- END COLUMN LAYOUTS -- */
+
+/* - END PAGE LAYOUT - */
+
+/* - START UTILITY CLASSES - */
+
+/* -- START SYNTAX HIGHLIGHTING UTILITY CLASSES -- */
+.code-block {
+  width: 90%;
+  padding: 0.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* -- END SYNTAX HIGHLIGHTING UTILITY CLASSES -- */
+
+/* -- START ALIGNMENT/JUSTIFICATION UTILITY CLASSES -- */
+.full-height {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Vertical */
+  justify-content: center; /* Horizontal */
+}
+
+.col-12-hcenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+.col-12-vcenter {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fl-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.fl-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.fljc-center {
+  justify-content: center;
+}
+
+.fljc-sp-around {
+  justify-content: space-around;
+}
+
+.fljc-sp-between {
+  justify-content: space-between;
+}
+
+.fljc-sp-evenly {
+  justify-content: space-evenly;
+}
+
+.fljc-fl-start {
+  justify-content: flex-start;
+}
+
+.fljc-fl-end {
+  justify-content: flex-end;
+}
+
+.flac-center {
+  align-content: center;
+}
+
+.flac-sp-around {
+  align-content: space-around;
+}
+
+.flac-sp-between {
+  align-content: space-between;
+}
+
+.flac-fl-start {
+  align-content: flex-start;
+}
+
+.flac-fl-end {
+  align-content: flex-end;
+}
+
+.flas-auto {
+  align-self: auto;
+}
+
+.flas-fl-start {
+  align-self: flex-start;
+}
+
+.flas-fl-end {
+  align-self: flex-end;
+}
+
+.flas-center {
+  align-self: center;
+}
+
+.flas-baseline {
+  align-self: baseline;
+}
+
+.flas-stretch {
+  align-self: stretch;
+}
+/* -- END ALIGNMENT/JUSTIFICATION UTILITY CLASSES -- */
+
+/* -- START WIDTH CLASSES -- */
+.w-100 {
+  width: 100%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-5 {
+  width: 100%;
+}
+.w-4 {
+  width: 80%;
+}
+.w-3 {
+  width: 60%;
+}
+.w-2 {
+  width: 40%;
+}
+.w-1 {
+  width: 20%;
+}
+/* -- END WIDTH CLASSES -- */
+
+/* -- START MARGIN CLASSES -- */
+
+/* --- START ALL-SIDE MARGIN CLASSES --- */
+.m-010 {
+  margin: 0.1rem;
+}
+.m-020 {
+  margin: 0.2rem;
+}
+.m-025 {
+  margin: 0.25rem;
+}
+.m-050 {
+  margin: 0.5rem;
+}
+.m-075 {
+  margin: 0.75rem;
+}
+.m-100 {
+  margin: 1rem;
+}
+.m-125 {
+  margin: 1.25rem;
+}
+.m-150 {
+  margin: 1.5rem;
+}
+.m-200 {
+  margin: 2rem;
+}
+/* --- END ALL-SIDE MARGIN CLASSES --- */
+
+/* --- START TOP-BOTTOM MARGIN CLASSES --- */
+.mtb-010 {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+.mtb-020 {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.mtb-025 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.mtb-050 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.mtb-075 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.mtb-100 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.mtb-125 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.mtb-150 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.mtb-200 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+/* --- END TOP-BOTTOM MARGIN CLASSES --- */
+
+/* --- START LEFT-RIGHT MARGIN CLASSES --- */
+.mlr-010 {
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+}
+.mlr-020 {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+.mlr-025 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.mlr-050 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.mlr-075 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+.mlr-100 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.mlr-125 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+.mlr-150 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.mlr-200 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+/* --- END LEFT-RIGHT MARGIN CLASSES --- */
+
+/* -- END MARGIN CLASSES -- */
+
+/* -- START PADDING CLASSES -- */
+
+/* --- START ALL-SIDE PADDING CLASSES --- */
+.p-010 {
+  padding: 0.1rem;
+}
+.p-020 {
+  padding: 0.2rem;
+}
+.p-025 {
+  padding: 0.25rem;
+}
+.p-050 {
+  padding: 0.5rem;
+}
+.p-075 {
+  padding: 0.75rem;
+}
+.p-100 {
+  padding: 1rem;
+}
+.p-125 {
+  padding: 1.25rem;
+}
+.p-150 {
+  padding: 1.5rem;
+}
+.p-200 {
+  padding: 2rem;
+}
+.p-300 {
+  padding: 3rem;
+}
+.p-400 {
+  padding: 4rem;
+}
+.p-500 {
+  padding: 5rem;
+}
+/* --- END ALL-SIDE PADDING CLASSES --- */
+
+/* --- START TOP-BOTTOM PADDING CLASSES --- */
+.ptb-010 {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+.ptb-020 {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+.ptb-025 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.ptb-050 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.ptb-075 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.ptb-100 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.ptb-125 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.ptb-150 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.ptb-200 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.ptb-300 {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.ptb-400 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.ptb-500 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+/* --- END TOP-BOTTOM PADDING CLASSES --- */
+
+/* --- START LEFT-RIGHT PADDING CLASSES --- */
+.plr-010 {
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+}
+.plr-020 {
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+.plr-025 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.plr-050 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.plr-075 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.plr-100 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.plr-125 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.plr-150 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.plr-200 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.plr-300 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.plr-400 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.plr-500 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+/* --- END LEFT-RIGHT PADDING CLASSES --- */
+
+/* -- END PADDING CLASSES -- */
+
+/* - END UTILITY CLASSES - */
+
+/* - START HEADER CSS - */
+.page-container .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header .site-logo {
+  font: inherit;
+  max-height: 50px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.site-logo .logo-img {
+  height: 100%;
+}
+
+.header .header-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.header .main-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-menu .main-menu-item {
+  padding: 0rem 0.5rem;
+  padding-bottom: 0.25rem;
+  transition: var(--transition-medium);
+}
+
+.main-menu .main-menu-item:hover {
+  color: var(--blue-700);
+}
+
+.main-menu-item.active {
+  /* border-bottom: 5px solid var(--blue-900); */
+  text-decoration: underline;
+}
+
+/* - END HEADER CSS - */
+
+/* - START SIDE-MENU CSS - */
+.content .side-menu {
+  font-family: var(--heading-font);
+  color: var(--black);
+}
+
+.side-menu .heading {
+  font: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+}
+
+.side-menu .sub-heading {
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+}
+
+.side-menu .item {
+  font: inherit;
+  padding-left: 0.5rem;
+  font-weight: 300;
+  line-height: 1.4rem;
+  transition: var(--transition-medium);
+}
+
+.side-menu .item:hover {
+  color: var(--blue-900);
+}
+
+.side-menu .item.active {
+  text-decoration: underline;
+}
+/* - END SIDE-MENU CSS - */
+
+/* - START AVATAR COMPONENT - */
+.avatar {
+  display: block;
+  padding: 0.25rem;
+  align-self: center;
+}
+
+.avatar img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.avatar-xs {
+  width: 2rem;
+}
+.avatar-s {
+  width: 2.75rem;
+}
+.avatar-m {
+  width: 3.25rem;
+}
+.avatar-l {
+  width: 3.75rem;
+}
+.avatar-xl {
+  width: 4.25rem;
+}
+/* - END AVATAR COMPONENT - */
