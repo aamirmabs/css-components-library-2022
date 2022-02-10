@@ -59,6 +59,22 @@ h6 {
   font-family: var(--heading-font);
 }
 
+a {
+  cursor: pointer;
+  color: var(--blue-900);
+  transition: var(--transition-medium);
+}
+
+a:link,
+a:visited {
+  color: var(--black);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue-700);
+}
+
 /* - START PAGE LAYOUT - */
 
 /* -- START STRUCTURAL LAYOUT -- */
@@ -675,7 +691,8 @@ h6 {
 }
 
 .main-menu-item.active {
-  border-bottom: 5px solid var(--blue-900);
+  /* border-bottom: 5px solid var(--blue-900); */
+  text-decoration: underline;
 }
 
 /* - END HEADER CSS - */
@@ -712,8 +729,8 @@ h6 {
   color: var(--blue-900);
 }
 
-.item > a:link,
-.item > a:visited {
-  color: var(--black);
+.side-menu .item.active {
+  /* border-bottom: 2px solid var(--blue-900); */
+  text-decoration: underline;
 }
 /* - END SIDE-MENU CSS - */
