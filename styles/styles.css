@@ -950,4 +950,18 @@ a:hover {
 
 /* -- END AVATAR STATUS -- */
 
+/* -- START AVATAR GROUP --  */
+
+.avatar-group {
+  display: flex;
+}
+.avatar-group.horizontal {
+  flex-direction: row;
+}
+.avatar-group.vertical {
+  flex-direction: column;
+}
+
+/* -- END AVATAR GROUP -- */
+
 /* - END AVATAR COMPONENT - */
