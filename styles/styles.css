@@ -103,14 +103,13 @@ a {
   transition: var(--transition-medium);
 }
 
-a:link,
 a:visited {
-  color: var(--black);
+  color: var(--blue-900);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--blue-700);
+  color: var(--blue-500);
 }
 
 /* - START PAGE LAYOUT - */
@@ -332,6 +331,16 @@ a:hover {
 /* --- END 4-4-4 COLUMNS --- */
 
 /* -- END COLUMN LAYOUTS -- */
+
+/* -- START PREV-NEXT NAV -- */
+
+.prev-next-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+/* -- END PREV-NEXT NAV -- */
 
 /* - END PAGE LAYOUT - */
 
