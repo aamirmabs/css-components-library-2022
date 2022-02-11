@@ -107,7 +107,11 @@
           </div>
           <div class="col-9">
             <h1>Avatars</h1>
+
             <h2>Standard Avatars</h2>
+            <p>Avatars come in 5 sizes:
+              <code class="language-css">xs, s, m, l and xl</code>.
+            </p>
             <div class="fl-row fljc-sp-evenly flas-center">
               <div class="avatar avatar-xl">
                 <img src="/assets/images/eule-1.jpg" alt="avatar image">
@@ -127,22 +131,176 @@
             </div>
             <div class="code-block">
               <pre><code class="language-html">
-            &lt;div class="avatar avatar-xl"&gt;
-              &lt;img src="/assets/images/eule-1.jpg" alt="avatar image"&gt;
-            &lt;/div&gt;
-            &lt;div class="avatar avatar-l"&gt;
-              &lt;img src="/assets/images/eule-2.jpg" alt="avatar image"&gt;
-            &lt;/div&gt;
-            &lt;div class="avatar avatar-m"&gt;
-              &lt;img src="/assets/images/eule-3.jpg" alt="avatar image"&gt;
-            &lt;/div&gt;
-            &lt;div class="avatar avatar-s"&gt;
-              &lt;img src="/assets/images/eule-4.jpg" alt="avatar image"&gt;
-            &lt;/div&gt;
-            &lt;div class="avatar avatar-xs"&gt;
-              &lt;img src="/assets/images/eule-5.jpg" alt="avatar image"&gt;
-            &lt;/div&gt;
-            </code></pre>
+                &lt;div class="avatar avatar-xl"&gt;
+                  &lt;img src="/assets/images/eule-1.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-l"&gt;
+                  &lt;img src="/assets/images/eule-2.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-m"&gt;
+                  &lt;img src="/assets/images/eule-3.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-s"&gt;
+                  &lt;img src="/assets/images/eule-4.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-xs"&gt;
+                  &lt;img src="/assets/images/eule-5.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+
+            <h2>Avatars with Status</h2>
+            <p>Avatars can have a status if needed. The colors names used are:
+              <code class="language-plain">
+                primary, secondary, success, danger, warning, info, light and dark</code>.
+              The size of the status highlighter will alter based on the size of
+              the avatar size (<code
+                class="language-css">.avatar-l, .avatar-m, etc.</code>) class.
+            </p>
+            <div class="fl-row fljc-sp-evenly flas-center">
+              <div class="avatar avatar-xl">
+                <img src="/assets/images/eule-1.jpg" alt="avatar image">
+                <span class='avatar-status status-success'></span>
+              </div>
+              <div class="avatar avatar-l">
+                <img src="/assets/images/eule-2.jpg" alt="avatar image">
+                <span class='avatar-status status-danger'></span>
+              </div>
+              <div class="avatar avatar-m">
+                <img src="/assets/images/eule-3.jpg" alt="avatar image">
+                <span class='avatar-status status-warning'></span>
+              </div>
+              <div class="avatar avatar-s">
+                <img src="/assets/images/eule-4.jpg" alt="avatar image">
+                <span class='avatar-status status-primary'></span>
+              </div>
+              <div class="avatar avatar-xs">
+                <img src="/assets/images/eule-5.jpg" alt="avatar image">
+                <span class='avatar-status status-secondary'></span>
+              </div>
+            </div>
+            <div class="code-block">
+              <pre><code class="language-html">
+                &lt;div class="avatar avatar-xl"&gt;
+                  &lt;img src="/assets/images/eule-1.jpg" alt="avatar image"&gt;
+                  &lt;span class='avatar-status status-success'&gt;&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-l"&gt;
+                  &lt;img src="/assets/images/eule-2.jpg" alt="avatar image"&gt;
+                  &lt;span class='avatar-status status-danger'&gt;&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-m"&gt;
+                  &lt;img src="/assets/images/eule-3.jpg" alt="avatar image"&gt;
+                  &lt;span class='avatar-status status-warning'&gt;&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-s"&gt;
+                  &lt;img src="/assets/images/eule-4.jpg" alt="avatar image"&gt;
+                  &lt;span class='avatar-status status-primary'&gt;&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-xs"&gt;
+                  &lt;img src="/assets/images/eule-5.jpg" alt="avatar image"&gt;
+                  &lt;span class='avatar-status status-secondary'&gt;&lt;/span&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+
+            <h2>Avatars Groups</h2>
+            <p>Avatars can be grouped either horizontally or vertical. All the
+              avatars have to be enclosed in a <code
+                class="language-css">.avatar-group</code> class. Internally
+              <code class="language-plain">flex</code> is used to set the
+              alignment and the default direction of a group is
+              horizontal/row-direction. To make the <code
+                class="language-plain">.avatar-group</code> align vertically,
+              use the <code class="language-plain">.vertical</code> class in
+              conjunction.
+            </p>
+
+            <!-- START HORIZONTAL AVATAR GROUP CODE -->
+            <h3>Horizontal Avatar Group</h3>
+            <div class="row">
+              <div class="col-4-8">
+                <div class="col-4-1">
+                  <div class="avatar-group horizontal">
+                    <div class="avatar avatar-l">
+                      <img src="/assets/images/eule-2.jpg" alt="avatar image">
+                      <span class='avatar-status status-danger'></span>
+                    </div>
+                    <div class="avatar avatar-l">
+                      <img src="/assets/images/eule-3.jpg" alt="avatar image">
+                      <span class='avatar-status status-danger'></span>
+                    </div>
+                    <div class="avatar avatar-l">
+                      <img src="/assets/images/eule-4.jpg" alt="avatar image">
+                      <span class='avatar-status status-danger'></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4-2">
+                  <pre>
+                    <code class="language-html">
+                      &lt;div class="avatar-group horizontal"&gt;
+                        &lt;div class="avatar avatar-l"&gt;
+                          &lt;img src="/assets/images/eule-2.jpg" alt="avatar image"&gt;
+                          &lt;span class='avatar-status status-danger'&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class="avatar avatar-l"&gt;
+                          &lt;img src="/assets/images/eule-3.jpg" alt="avatar image"&gt;
+                          &lt;span class='avatar-status status-danger'&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class="avatar avatar-l"&gt;
+                          &lt;img src="/assets/images/eule-4.jpg" alt="avatar image"&gt;
+                          &lt;span class='avatar-status status-danger'&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- START VERTICAL AVATAR GROUP CODE -->
+            <h3>Vertical Avatar Group</h3>
+            <div class="row">
+              <div class="col-4-8">
+                <div class="col-4-1">
+                  <div class="avatar-group vertical">
+                    <div class="avatar avatar-l">
+                      <img src="/assets/images/eule-2.jpg" alt="avatar image">
+                      <span class='avatar-status status-danger'></span>
+                    </div>
+                    <div class="avatar avatar-l">
+                      <img src="/assets/images/eule-3.jpg" alt="avatar image">
+                      <span class='avatar-status status-danger'></span>
+                    </div>
+                    <div class="avatar avatar-l">
+                      <img src="/assets/images/eule-4.jpg" alt="avatar image">
+                      <span class='avatar-status status-danger'></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4-2">
+                  <pre>
+                    <code class="language-html">
+                      &lt;div class="avatar-group vertical"&gt;
+                        &lt;div class="avatar avatar-l"&gt;
+                          &lt;img src="/assets/images/eule-2.jpg" alt="avatar image"&gt;
+                          &lt;span class='avatar-status status-danger'&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class="avatar avatar-l"&gt;
+                          &lt;img src="/assets/images/eule-3.jpg" alt="avatar image"&gt;
+                          &lt;span class='avatar-status status-danger'&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class="avatar avatar-l"&gt;
+                          &lt;img src="/assets/images/eule-4.jpg" alt="avatar image"&gt;
+                          &lt;span class='avatar-status status-danger'&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+                </div>
+                <!-- END VERTICAL AVATAR GROUP CODE -->
+              </div>
             </div>
           </div>
         </div>
