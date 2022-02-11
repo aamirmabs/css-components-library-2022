@@ -9,6 +9,20 @@
   --light: #f8f9fa;
   --dark: #212529;
 
+  /* status color variations */
+  --primary-bg: #c0d9ff;
+  --primary-text: #003f9e;
+  --secondary-bg: #b7bdc2;
+  --secondary-text: #454749;
+  --success-bg: #d1fde9;
+  --success-text: #024d2a;
+  --danger-bg: #f8d1d5;
+  --danger-text: #770712;
+  --warning-bg: #fbf0ce;
+  --warning-text: #aa8106;
+  --info-bg: #d1f2f8;
+  --info-text: #047c94;
+
   /* color pallettes */
   --test-red: #fff5f5;
   --red: #e44343;
@@ -1009,6 +1023,67 @@ a:hover {
 
   background-color: var(--gray-100);
   color: var(--black-900);
+}
+
+.alert.alert-primary {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+.alert.alert-primary a {
+  color: var(--primary-text);
+}
+
+.alert.alert-primary {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+.alert.alert-primary a {
+  color: var(--primary-text);
+}
+
+.alert.alert-secondary {
+  background-color: var(--secondary-bg);
+  color: var(--secondary-text);
+}
+.alert.alert-secondary a {
+  color: var(--secondary-text);
+}
+
+.alert.alert-success {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+}
+.alert.alert-success a {
+  color: var(--success-text);
+}
+
+.alert.alert-danger {
+  background-color: var(--danger-bg);
+  color: var(--danger-text);
+}
+.alert.alert-danger a {
+  color: var(--danger-text);
+}
+
+.alert.alert-warning {
+  background-color: var(--warning-bg);
+  color: var(--warning-text);
+}
+.alert.alert-warning a {
+  color: var(--warning-text);
+}
+
+.alert.alert-info {
+  background-color: var(--info-bg);
+  color: var(--info-text);
+}
+.alert.alert-info a {
+  color: var(--info-text);
+}
+
+.alert > a {
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 /* - END ALERTS CSS - */
