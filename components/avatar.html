@@ -107,7 +107,11 @@
           </div>
           <div class="col-9">
             <h1>Avatars</h1>
+
             <h2>Standard Avatars</h2>
+            <p>Avatars come in 5 sizes:
+              <code class="language-css">xs, s, m, l and xl</code>.
+            </p>
             <div class="fl-row fljc-sp-evenly flas-center">
               <div class="avatar avatar-xl">
                 <img src="/assets/images/eule-1.jpg" alt="avatar image">
@@ -127,22 +131,73 @@
             </div>
             <div class="code-block">
               <pre><code class="language-html">
-            &lt;div class="avatar avatar-xl"&gt;
-              &lt;img src="/assets/images/eule-1.jpg" alt="avatar image"&gt;
-            &lt;/div&gt;
-            &lt;div class="avatar avatar-l"&gt;
-              &lt;img src="/assets/images/eule-2.jpg" alt="avatar image"&gt;
-            &lt;/div&gt;
-            &lt;div class="avatar avatar-m"&gt;
-              &lt;img src="/assets/images/eule-3.jpg" alt="avatar image"&gt;
-            &lt;/div&gt;
-            &lt;div class="avatar avatar-s"&gt;
-              &lt;img src="/assets/images/eule-4.jpg" alt="avatar image"&gt;
-            &lt;/div&gt;
-            &lt;div class="avatar avatar-xs"&gt;
-              &lt;img src="/assets/images/eule-5.jpg" alt="avatar image"&gt;
-            &lt;/div&gt;
-            </code></pre>
+                &lt;div class="avatar avatar-xl"&gt;
+                  &lt;img src="/assets/images/eule-1.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-l"&gt;
+                  &lt;img src="/assets/images/eule-2.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-m"&gt;
+                  &lt;img src="/assets/images/eule-3.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-s"&gt;
+                  &lt;img src="/assets/images/eule-4.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-xs"&gt;
+                  &lt;img src="/assets/images/eule-5.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+
+            <h2>Avatars with Status</h2>
+            <p>Avatars can have a status if needed. The colors names used are:
+              <code class="language-plain">
+                primary, secondary, success, danger, warning, info, light and dark</code>.
+              The size of the status highlighter will alter based on the size of
+              the avatar size (<code
+                class="language-css">.avatar-l, .avatar-m, etc.</code>) class
+
+            </p>
+            <div class="fl-row fljc-sp-evenly flas-center">
+              <div class="avatar avatar-xl">
+                <img src="/assets/images/eule-1.jpg" alt="avatar image">
+                <span class='avatar-status status-success'></span>
+              </div>
+              <div class="avatar avatar-l">
+                <img src="/assets/images/eule-2.jpg" alt="avatar image">
+                <span class='avatar-status status-danger'></span>
+              </div>
+              <div class="avatar avatar-m">
+                <img src="/assets/images/eule-3.jpg" alt="avatar image">
+                <span class='avatar-status status-warning'></span>
+              </div>
+              <div class="avatar avatar-s">
+                <img src="/assets/images/eule-4.jpg" alt="avatar image">
+                <span class='avatar-status status-primary'></span>
+              </div>
+              <div class="avatar avatar-xs">
+                <img src="/assets/images/eule-5.jpg" alt="avatar image">
+                <span class='avatar-status status-secondary'></span>
+              </div>
+            </div>
+            <div class="code-block">
+              <pre><code class="language-html">
+                &lt;div class="avatar avatar-xl"&gt;
+                  &lt;img src="/assets/images/eule-1.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-l"&gt;
+                  &lt;img src="/assets/images/eule-2.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-m"&gt;
+                  &lt;img src="/assets/images/eule-3.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-s"&gt;
+                  &lt;img src="/assets/images/eule-4.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+                &lt;div class="avatar avatar-xs"&gt;
+                  &lt;img src="/assets/images/eule-5.jpg" alt="avatar image"&gt;
+                &lt;/div&gt;
+              </code></pre>
             </div>
           </div>
         </div>

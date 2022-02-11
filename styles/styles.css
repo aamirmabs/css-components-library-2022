@@ -1,4 +1,14 @@
 :root {
+  /* status colors */
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --success: #198754;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #0dcaf0;
+  --light: #f8f9fa;
+  --dark: #212529;
+
   /* color pallettes */
   --red: #e44343;
   --red-100: #facbcb;
@@ -21,12 +31,40 @@
   --blue-700: #164f99;
   --blue-900: #08336b;
 
+  --yellow: #ffcd02;
+  --yellow-100: #ffeea8;
+  --yellow-300: #ffe167;
+  --yellow-500: #ffcd02;
+  --yellow-700: #cea504;
+  --yellow-900: #a08002;
+
+  --violet: #8b56f6;
+  --violet-100: #d9c6ff;
+  --violet-300: #b793ff;
+  --violet-500: #8b56f6;
+  --violet-700: #661bfc;
+  --violet-900: #3600a1;
+
+  --pink: #ec4899;
+  --pink-100: #ffb5da;
+  --pink-300: #ff8bc5;
+  --pink-500: #ec4899;
+  --pink-700: #c2176c;
+  --pink-900: #850042;
+
   --white: #f3f3f3;
   --white-100: #ffffff;
   --white-300: #fafafa;
   --white-500: #f3f3f3;
   --white-700: #e9e9e9;
   --white-900: #eeeeee;
+
+  --gray: #9a9a9a;
+  --gray-100: #d4d4d4;
+  --gray-300: #b4b4b4;
+  --gray-500: #9a9a9a;
+  --gray-700: #777777;
+  --gray-900: #535353;
 
   --black: #101010;
   --black-100: #202020;
@@ -789,9 +827,11 @@ a:hover {
 
 /* - START AVATAR COMPONENT - */
 .avatar {
-  display: block;
+  /* display: block; */
   padding: 0.25rem;
   align-self: center;
+  display: inline-block;
+  position: relative;
 }
 
 .avatar img {
@@ -799,6 +839,7 @@ a:hover {
   border-radius: 100%;
 }
 
+/* -- START AVATAR SIZES -- */
 .avatar-xs {
   width: 2rem;
 }
@@ -814,4 +855,99 @@ a:hover {
 .avatar-xl {
   width: 4.25rem;
 }
+/* -- END AVATAR SIZES -- */
+
+/* -- START AVATAR STATUS -- */
+
+.avatar .avatar-status {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  border-radius: 100%;
+}
+
+/* -- START AVATAR STATUS SIZES -- */
+
+.avatar.avatar-xl .avatar-status {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.avatar.avatar-l .avatar-status {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-width: 2.5px;
+  border-style: solid;
+}
+
+.avatar.avatar-m .avatar-status {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.avatar.avatar-s .avatar-status {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-width: 1.5px;
+  border-style: solid;
+}
+
+.avatar.avatar-xs .avatar-status {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-width: 1px;
+  border-style: solid;
+}
+
+/* -- END AVATAR STATUS SIZES -- */
+
+/* -- START AVATAR STATUS COLORS -- */
+
+.avatar-status.status-primary {
+  background: var(--primary);
+  border-color: var(--white);
+}
+
+.avatar-status.status-secondary {
+  background: var(--secondary);
+  border-color: var(--white);
+}
+
+.avatar-status.status-success {
+  background: var(--success);
+  border-color: var(--white);
+}
+
+.avatar-status.status-danger {
+  background: var(--danger);
+  border-color: var(--white);
+}
+
+.avatar-status.status-warning {
+  background: var(--warning);
+  border-color: var(--white);
+}
+
+.avatar-status.status-info {
+  background: var(--info);
+  border-color: var(--white);
+}
+
+.avatar-status.status-light {
+  background: var(--light);
+  border-color: var(--white);
+}
+
+.avatar-status.status-dark {
+  background: var(--dark);
+  border-color: var(--white);
+}
+/* -- START AVATAR STATUS COLORS -- */
+
+/* -- END AVATAR STATUS -- */
+
 /* - END AVATAR COMPONENT - */
