@@ -9,7 +9,22 @@
   --light: #f8f9fa;
   --dark: #212529;
 
+  /* status color variations */
+  --primary-bg: #c0d9ff;
+  --primary-text: #003f9e;
+  --secondary-bg: #b7bdc2;
+  --secondary-text: #454749;
+  --success-bg: #d1fde9;
+  --success-text: #024d2a;
+  --danger-bg: #f8d1d5;
+  --danger-text: #770712;
+  --warning-bg: #fbf0ce;
+  --warning-text: #aa8106;
+  --info-bg: #d1f2f8;
+  --info-text: #047c94;
+
   /* color pallettes */
+  --test-red: #fff5f5;
   --red: #e44343;
   --red-100: #facbcb;
   --red-300: #e77777;
@@ -17,6 +32,7 @@
   --red-700: #a11e1e;
   --red-900: #751313;
 
+  --test-green: #ebfff3;
   --green: #2fc769;
   --green-100: #c1f7d5;
   --green-300: #69e699;
@@ -24,6 +40,7 @@
   --green-700: #128d41;
   --green-900: #045523;
 
+  --test-blue: #eff6ff;
   --blue: #2f71c7;
   --blue-100: #c4dcfa;
   --blue-300: #6399e0;
@@ -97,6 +114,10 @@ h6 {
   font-family: var(--heading-font);
 }
 
+p {
+  line-height: 1.75rem;
+}
+
 a {
   cursor: pointer;
   color: var(--blue-900);
@@ -123,14 +144,14 @@ a:hover {
 }
 
 .page-container .header {
-  background-color: var(--red-100);
+  background-color: var(--test-red);
   min-height: 5vh;
   font-family: var(--heading-font);
   padding: 1rem;
 }
 .page-container .content {
-  background-color: var(--green-100);
-  padding: 1rem;
+  background-color: var(--test-green);
+  padding: 0.25rem;
   flex-grow: 2;
 
   /* styles for rows and columns */
@@ -138,7 +159,7 @@ a:hover {
   flex-direction: column;
 }
 .page-container .footer {
-  background-color: var(--blue-100);
+  background-color: var(--test-blue);
   padding: 1rem;
   min-height: 5vh;
   font-family: var(--heading-font);
@@ -149,7 +170,7 @@ a:hover {
 .content .row {
   display: flex;
   flex-direction: row;
-  padding: 0.5rem 0rem;
+  padding: 0rem 0rem;
 }
 
 /* --- START 12 COLUMNS --- */
@@ -158,13 +179,13 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
+  gap: 0rem 0rem;
   grid-template-areas: "col-12";
 }
 
 .row-full .col-12 {
   grid-area: col-12;
-  background-color: var(--red-100);
+  background-color: var(--test-red);
 }
 
 .row.row-full-centered {
@@ -175,7 +196,7 @@ a:hover {
 }
 
 .row-full-centered .col-12 {
-  background-color: var(--red-100);
+  background-color: var(--test-red);
 }
 /* --- END 12 COLUMNS --- */
 
@@ -185,17 +206,19 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
+  gap: 0rem 0rem;
   grid-template-areas: "col-6-1 col-6-2";
 }
 
 .col-6-6 .col-6-1 {
+  padding: 1rem;
   grid-area: col-6-1;
-  background-color: var(--red-100);
+  background-color: var(--test-red);
 }
 .col-6-6 .col-6-2 {
+  padding: 1rem;
   grid-area: col-6-2;
-  background-color: var(--blue-100);
+  background-color: var(--test-blue);
 }
 /* --- END 6-6 COLUMNS --- */
 
@@ -205,17 +228,19 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
+  gap: 0rem 0rem;
   grid-template-areas: "col-4 col-8";
 }
 
 .col-4-8 .col-4 {
+  padding: 1rem;
   grid-area: col-4;
-  background-color: var(--red-100);
+  background-color: var(--test-red);
 }
 .col-4-8 .col-8 {
+  padding: 1rem;
   grid-area: col-8;
-  background-color: var(--blue-100);
+  background-color: var(--test-blue);
 }
 /* --- END 4-8 COLUMNS --- */
 
@@ -225,17 +250,19 @@ a:hover {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
+  gap: 0rem 0rem;
   grid-template-areas: "col-8 col-4";
 }
 
 .col-8-4 .col-4 {
+  padding: 1rem;
   grid-area: col-4;
-  background-color: var(--blue-100);
+  background-color: var(--test-blue);
 }
 .col-8-4 .col-8 {
+  padding: 1rem;
   grid-area: col-8;
-  background-color: var(--red-100);
+  background-color: var(--test-red);
 }
 /* --- END 4-8 COLUMNS --- */
 
@@ -245,17 +272,19 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
+  gap: 0rem 0rem;
   grid-template-areas: "col-3 col-9";
 }
 
 .col-3-9 .col-3 {
+  padding: 1rem;
   grid-area: col-3;
-  background-color: var(--red-100);
+  background-color: var(--test-red);
 }
 .col-3-9 .col-9 {
+  padding: 1rem;
   grid-area: col-9;
-  background-color: var(--blue-100);
+  background-color: var(--test-blue);
 }
 /* --- END 3-9 COLUMNS --- */
 
@@ -265,17 +294,19 @@ a:hover {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
+  gap: 0rem 0rem;
   grid-template-areas: "col-9 col-3";
 }
 
 .col-9-3 .col-3 {
+  padding: 1rem;
   grid-area: col-3;
-  background-color: var(--blue-100);
+  background-color: var(--test-blue);
 }
 .col-9-3 .col-9 {
+  padding: 1rem;
   grid-area: col-9;
-  background-color: var(--red-100);
+  background-color: var(--test-red);
 }
 /* --- END 3-9 COLUMNS --- */
 
@@ -285,23 +316,26 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
+  gap: 0rem 0rem;
   grid-template-areas: "col-2-1 col-8 col-2-2";
 }
 
 .col-2-8-2 .col-2-1 {
+  padding: 1rem;
   grid-area: col-2-1;
-  background-color: var(--red-100);
+  background-color: var(--test-red);
 }
 
 .col-2-8-2 .col-8 {
+  padding: 1rem;
   grid-area: col-8;
-  background-color: var(--blue-100);
+  background-color: var(--test-blue);
 }
 
 .col-2-8-2 .col-2-2 {
+  padding: 1rem;
   grid-area: col-2-2;
-  background-color: var(--red-100);
+  background-color: var(--test-red);
 }
 /* --- END 2-8-2 COLUMNS --- */
 
@@ -311,23 +345,26 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
+  gap: 0rem 0rem;
   grid-template-areas: "col-4-1 col-4-2 col-4-3";
 }
 
 .col-4-4-4 .col-4-1 {
+  padding: 1rem;
   grid-area: col-4-1;
-  background-color: var(--red-100);
+  background-color: var(--test-red);
 }
 
 .col-4-4-4 .col-4-2 {
+  padding: 1rem;
   grid-area: col-4-2;
-  background-color: var(--blue-100);
+  background-color: var(--test-blue);
 }
 
 .col-4-4-4 .col-4-3 {
+  padding: 1rem;
   grid-area: col-4-3;
-  background-color: var(--red-100);
+  background-color: var(--test-red);
 }
 /* --- END 4-4-4 COLUMNS --- */
 
@@ -975,3 +1012,78 @@ a:hover {
 /* -- END AVATAR GROUP -- */
 
 /* - END AVATAR COMPONENT - */
+
+/* - START ALERTS CSS - */
+
+.alert {
+  display: block;
+  padding: 0.5rem;
+  margin: 0.5rem 0rem;
+  border-radius: 0.25rem;
+
+  background-color: var(--gray-100);
+  color: var(--black-900);
+}
+
+.alert.alert-primary {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+.alert.alert-primary a {
+  color: var(--primary-text);
+}
+
+.alert.alert-primary {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+.alert.alert-primary a {
+  color: var(--primary-text);
+}
+
+.alert.alert-secondary {
+  background-color: var(--secondary-bg);
+  color: var(--secondary-text);
+}
+.alert.alert-secondary a {
+  color: var(--secondary-text);
+}
+
+.alert.alert-success {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+}
+.alert.alert-success a {
+  color: var(--success-text);
+}
+
+.alert.alert-danger {
+  background-color: var(--danger-bg);
+  color: var(--danger-text);
+}
+.alert.alert-danger a {
+  color: var(--danger-text);
+}
+
+.alert.alert-warning {
+  background-color: var(--warning-bg);
+  color: var(--warning-text);
+}
+.alert.alert-warning a {
+  color: var(--warning-text);
+}
+
+.alert.alert-info {
+  background-color: var(--info-bg);
+  color: var(--info-text);
+}
+.alert.alert-info a {
+  color: var(--info-text);
+}
+
+.alert > a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* - END ALERTS CSS - */
