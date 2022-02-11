@@ -101,6 +101,7 @@ a {
   cursor: pointer;
   color: var(--blue-900);
   transition: var(--transition-medium);
+  text-decoration: none;
 }
 
 a:visited {
