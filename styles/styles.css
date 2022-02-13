@@ -24,10 +24,10 @@
   --info-text: #047c94;
 
   /* used to debug by showing borders */
-  --test-debug: #f75b5b;
-  --debug-red: #ffb1b1;
-  --debug-blue: #b1d3ff;
-  --debug-green: #c1ffb1;
+  --test-debug: #6b6b6b;
+  --debug-shade-1: #d7e9ff;
+  --debug-shade-2: #b1d3ff;
+  --debug-shade-3: #86bbff;
 
   /* color pallettes */
   --test-red: #fff3f3;
@@ -190,14 +190,14 @@ a:hover {
 .debug {
   border: 2px solid var(--test-debug);
 }
-.debug.red-bg {
-  background-color: var(--debug-red);
+.debug.debug-bg-1 {
+  background-color: var(--debug-shade-1);
 }
-.debug .blue-bg {
-  background-color: var(--debug-blue);
+.debug.debug-bg-2 {
+  background-color: var(--debug-shade-2);
 }
-.debug .green-bg {
-  background-color: var(--debug-green);
+.debug.debug-bg-3 {
+  background-color: var(--debug-shade-3);
 }
 
 .row.row-full {
