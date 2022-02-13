@@ -568,6 +568,21 @@ a:hover {
   justify-content: space-between;
   padding: 1rem 2rem;
 }
+.prev-next-nav .group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.prev-next-nav .direction {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.prev-next-nav .title {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
 
 /* -- END PREV-NEXT NAV -- */
 
@@ -1038,8 +1053,6 @@ a:hover {
 /* - START SIDE-MENU CSS - */
 .content .side-menu {
   font-family: var(--heading-font);
-  color: var(--black);
-  background-color: var(--white-900);
 }
 
 .side-menu .heading {
@@ -1047,6 +1060,7 @@ a:hover {
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.6rem;
+  color: var(--white-100);
 }
 
 .side-menu .sub-heading {
@@ -1058,18 +1072,28 @@ a:hover {
 
 .side-menu .item {
   font: inherit;
-  padding-left: 0.5rem;
-  font-weight: 300;
+  padding: 0.25rem 0.5rem;
+  font-weight: 500;
   line-height: 1.4rem;
-  transition: var(--transition-medium);
+  color: var(--white-100);
 }
 
 .side-menu .item:hover {
-  color: var(--blue-900);
+  transition: var(--transition-slow);
+  color: var(--yellow);
+  background-color: var(--black-700);
 }
 
 .side-menu .item.active {
   text-decoration: underline;
+  color: var(--yellow-300);
+  background-color: var(--black-100);
+}
+
+.side-menu .item.active:hover {
+  text-decoration: underline;
+  color: var(--yellow-500);
+  background-color: var(--black-700);
 }
 /* - END SIDE-MENU CSS - */
 
