@@ -162,7 +162,7 @@ a:hover {
 }
 .page-container .content {
   /* background-color: var(--test-green); */
-  padding: 0.25rem;
+  padding: 0.05%;
   flex-grow: 2;
 
   /* styles for rows and columns */
@@ -179,14 +179,7 @@ a:hover {
 }
 /* -- END STRUCTURAL LAYOUT -- */
 
-/* -- START COLUMN LAYOUTS -- */
-.content .row {
-  display: flex;
-  flex-direction: row;
-  padding: 0rem 0rem;
-}
-
-/* --- START 12 COLUMNS --- */
+/* -- START DEBUGGING STYLES -- */
 .debug {
   border: 2px solid var(--test-debug);
 }
@@ -199,7 +192,67 @@ a:hover {
 .debug.debug-bg-3 {
   background-color: var(--debug-shade-3);
 }
+/* -- END DEBUGGING STYLES -- */
 
+/* -- START FRACTIONAL COLUMN LAYOUTS -- */
+
+.content .layout-one-col {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem;
+  width: 100%;
+}
+.layout-one-col .one-col {
+  padding: 0.2%;
+}
+
+.content .layout-two-cols {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: auto;
+  padding: 0rem;
+}
+.layout-two-cols .one-col {
+  padding: 0.2%;
+  width: 49.125%;
+}
+.layout-two-cols .two-cols {
+  padding: 0.25%;
+  width: 99.5%;
+}
+
+.content .layout-three-cols {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1;
+  padding: 0rem;
+}
+.layout-three-cols .one-col {
+  padding: 0.2%;
+  width: 32.4%;
+}
+.layout-three-cols .two-cols {
+  padding: 0.2%;
+  width: 65.8%;
+}
+.layout-three-cols .three-cols {
+  padding: 0.2%;
+  width: 99.8%;
+}
+
+/* -- END FRACTIONAL COLUMN LAYOUTS -- */
+
+/* -- START 12 COLUMN LAYOUTS -- */
+.content .row {
+  display: flex;
+  flex-direction: row;
+  padding: 0rem 0rem;
+}
+
+/* --- START 12 COLUMNS --- */
 .row.row-full {
   width: 100%;
   display: grid;
@@ -432,7 +485,7 @@ a:hover {
 }
 /* --- END 3-6-3 COLUMNS --- */
 
-/* -- END COLUMN LAYOUTS -- */
+/* -- END 12 COLUMN LAYOUTS -- */
 
 /* -- START PREV-NEXT NAV -- */
 
