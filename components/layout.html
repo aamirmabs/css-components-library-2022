@@ -445,6 +445,133 @@
               </pre>
             </div>
 
+            <h3>4 Columns Layout</h3>
+            <p>You can either use four single columns with four <code
+                class="language-html">one-col</code>'s.
+            </p>
+
+            <div class="layout-four-cols">
+              <div class="one-col debug debug-bg-1">.one-col Column</div>
+              <div class="one-col debug debug-bg-2">.one-col Column</div>
+              <div class="one-col debug debug-bg-3">.one-col Column</div>
+              <div class="one-col debug debug-bg-2">.one-col Column</div>
+            </div>
+
+            <div class="code-block">
+              <pre>
+                <code class="language-html">
+                  &lt;div class="layout-three-cols"&gt;
+                    &lt;div class="one-col"&gt;.one-col Column&lt;/div&gt;
+                    &lt;div class="one-col"&gt;.one-col Column&lt;/div&gt;
+                    &lt;div class="one-col"&gt;.one-col Column&lt;/div&gt;
+                  &lt;/div&gt;
+                </code>
+              </pre>
+            </div>
+
+            <p>Or you can use a combination of one column <code
+                class="language-html">one-col</code>'s'
+              with two column <code class="language-html">two-cols</code>'s.
+            </p>
+
+            <div class="layout-four-cols">
+              <div class="two-cols debug debug-bg-1">.two-cols Column</div>
+              <div class="two-cols debug debug-bg-2">.two-cols Column</div>
+            </div>
+            <div class="layout-four-cols">
+              <div class="two-cols debug debug-bg-1">.two-cols Column</div>
+              <div class="one-col debug debug-bg-2">.one-col Column</div>
+              <div class="one-col debug debug-bg-3">.one-col Column</div>
+            </div>
+            <div class="layout-four-cols">
+              <div class="one-col debug debug-bg-1">.one-col Column</div>
+              <div class="two-cols debug debug-bg-2">.two-cols Column</div>
+              <div class="one-col debug debug-bg-3">.one-col Column</div>
+            </div>
+            <div class="layout-four-cols">
+              <div class="one-col debug debug-bg-1">.one-col Column</div>
+              <div class="one-col debug debug-bg-2">.one-col Column</div>
+              <div class="two-cols debug debug-bg-3">.two-cols Column</div>
+            </div>
+
+            <div class="code-block">
+              <pre>
+                <code class="language-html">
+                  &lt;div class="layout-four-cols"&gt;
+                    &lt;div class="two-cols debug debug-bg-1"&gt;.two-cols Column&lt;/div&gt;
+                    &lt;div class="two-cols debug debug-bg-2"&gt;.two-cols Column&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="layout-four-cols"&gt;
+                    &lt;div class="two-cols debug debug-bg-1"&gt;.two-cols Column&lt;/div&gt;
+                    &lt;div class="one-col debug debug-bg-2"&gt;.one-col Column&lt;/div&gt;
+                    &lt;div class="one-col debug debug-bg-3"&gt;.one-col Column&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="layout-four-cols"&gt;
+                    &lt;div class="one-col debug debug-bg-1"&gt;.one-col Column&lt;/div&gt;
+                    &lt;div class="two-cols debug debug-bg-2"&gt;.two-cols Column&lt;/div&gt;
+                    &lt;div class="one-col debug debug-bg-3"&gt;.one-col Column&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="layout-four-cols"&gt;
+                    &lt;div class="one-col debug debug-bg-1"&gt;.one-col Column&lt;/div&gt;
+                    &lt;div class="one-col debug debug-bg-2"&gt;.one-col Column&lt;/div&gt;
+                    &lt;div class="two-cols debug debug-bg-3"&gt;.two-cols Column&lt;/div&gt;
+                  &lt;/div&gt;
+                </code>
+              </pre>
+            </div>
+
+            <p>Or you can use a combination of one column <code
+                class="language-html">one-col</code> and a three column <code
+                class="language-html">three-cols</code>.
+            </p>
+
+            <div class="layout-four-cols">
+              <div class="one-col debug debug-bg-1">.one-col Column</div>
+              <div class="three-cols debug debug-bg-2">.three-cols Column</div>
+            </div>
+            <div class="layout-four-cols">
+              <div class="three-cols debug debug-bg-1">.three-cols Column</div>
+              <div class="one-col debug debug-bg-2">.one-col Column</div>
+            </div>
+
+            <div class="code-block">
+              <pre>
+                <code class="language-html">
+                  &lt;div class="layout-four-cols"&gt;
+                    &lt;div class="one-col debug debug-bg-1"&gt;.one-col Column&lt;/div&gt;
+                    &lt;div class="three-cols debug debug-bg-2"&gt;.three-cols Column&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="layout-four-cols"&gt;
+                    &lt;div class="three-cols debug debug-bg-1"&gt;.three-cols Column&lt;/div&gt;
+                    &lt;div class="one-col debug debug-bg-2"&gt;.one-col Column&lt;/div&gt;
+                  &lt;/div&gt;
+                </code>
+              </pre>
+            </div>
+
+            <p>Or you can use a single four column <code
+                class="language-html">four-cols</code>.
+            </p>
+
+            <div class="layout-four-cols">
+              <div class="four-cols debug debug-bg-1">.four-cols Column</div>
+            </div>
+
+            <div class="code-block">
+              <pre>
+                <code class="language-html">
+                  &lt;div class="layout-four-cols"&gt;
+                    &lt;div class="one-col debug debug-bg-1"&gt;.one-col Column&lt;/div&gt;
+                    &lt;div class="three-cols debug debug-bg-2"&gt;.three-cols Column&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="layout-four-cols"&gt;
+                    &lt;div class="three-cols debug debug-bg-1"&gt;.three-cols Column&lt;/div&gt;
+                    &lt;div class="one-col debug debug-bg-2"&gt;.one-col Column&lt;/div&gt;
+                  &lt;/div&gt;
+                </code>
+              </pre>
+            </div>
+
           </div>
         </div>
       </div>

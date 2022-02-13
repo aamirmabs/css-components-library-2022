@@ -196,6 +196,7 @@ a:hover {
 
 /* -- START FRACTIONAL COLUMN LAYOUTS -- */
 
+/* --- START ONE COLUMN FRACTIONAL --- */
 .content .layout-one-col {
   display: flex;
   flex-direction: column;
@@ -205,7 +206,9 @@ a:hover {
 .layout-one-col .one-col {
   padding: 0.2%;
 }
+/* --- END ONE COLUMN FRACTIONAL --- */
 
+/* --- START TWO COLUMN FRACTIONAL --- */
 .content .layout-two-cols {
   display: flex;
   flex-direction: row;
@@ -222,12 +225,14 @@ a:hover {
   padding: 0.25%;
   width: 99.5%;
 }
+/* --- END TWO COLUMN FRACTIONAL --- */
 
+/* --- START THREE COLUMN FRACTIONAL --- */
 .content .layout-three-cols {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 1;
+  width: 100%;
   padding: 0rem;
 }
 .layout-three-cols .one-col {
@@ -242,6 +247,38 @@ a:hover {
   padding: 0.2%;
   width: 99.8%;
 }
+/* --- END THREE COLUMN FRACTIONAL --- */
+
+/* --- START FOUR COLUMN FRACTIONAL --- */
+.content .layout-four-cols {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0rem;
+}
+.layout-four-cols .one-col {
+  padding: 0.2%;
+  width: 24.1%;
+}
+.layout-four-cols .two-cols {
+  padding: 0.2%;
+  width: 49.17%;
+}
+.layout-four-cols .two-cols + .two-cols {
+  padding: 0.2%;
+  width: 49.05%;
+}
+.layout-four-cols .three-cols {
+  padding: 0.2%;
+  width: 74.1%;
+}
+.layout-four-cols .four-cols {
+  padding: 0.2%;
+  width: 99.8%;
+}
+/* --- END FOUR COLUMN FRACTIONAL --- */
 
 /* -- END FRACTIONAL COLUMN LAYOUTS -- */
 
