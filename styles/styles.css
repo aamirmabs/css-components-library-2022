@@ -181,7 +181,7 @@ a:hover {
 
 /* -- START DEBUGGING STYLES -- */
 .debug {
-  border: 2px solid var(--test-debug);
+  border: 1px solid var(--test-debug);
 }
 .debug.debug-bg-1 {
   background-color: var(--debug-shade-1);
@@ -191,6 +191,12 @@ a:hover {
 }
 .debug.debug-bg-3 {
   background-color: var(--debug-shade-3);
+}
+.debug-all {
+  border: 1px solid var(--test-debug);
+}
+.debug-all * {
+  border: 1px solid var(--test-debug);
 }
 /* -- END DEBUGGING STYLES -- */
 
@@ -260,25 +266,56 @@ a:hover {
 }
 .layout-four-cols .one-col {
   padding: 0.2%;
-  width: 24.1%;
+  width: 24.32%;
 }
 .layout-four-cols .two-cols {
   padding: 0.2%;
-  width: 49.17%;
+  width: 49.45%;
 }
 .layout-four-cols .two-cols + .two-cols {
   padding: 0.2%;
-  width: 49.05%;
+  width: 49.27%;
 }
 .layout-four-cols .three-cols {
   padding: 0.2%;
-  width: 74.1%;
+  width: 74.4%;
 }
 .layout-four-cols .four-cols {
   padding: 0.2%;
   width: 99.8%;
 }
 /* --- END FOUR COLUMN FRACTIONAL --- */
+
+/* --- START FIVE COLUMN FRACTIONAL --- */
+.content .layout-five-cols {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0rem;
+}
+.layout-five-cols .one-col {
+  padding: 0.2%;
+  width: 19.35%;
+}
+.layout-five-cols .two-cols {
+  padding: 0.2%;
+  width: 39.35%;
+}
+.layout-five-cols .three-cols {
+  padding: 0.2%;
+  width: 59.3%;
+}
+.layout-five-cols .four-cols {
+  padding: 0.2%;
+  width: 79.35%;
+}
+.layout-five-cols .five-cols {
+  padding: 0.2%;
+  width: 99.6%;
+}
+/* --- END FIVE COLUMN FRACTIONAL --- */
 
 /* -- END FRACTIONAL COLUMN LAYOUTS -- */
 
