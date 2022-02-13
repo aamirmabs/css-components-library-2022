@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=1280, initial-scale=1.0" />
+  <title>CSS Component Library</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- prism css -->
+  <link rel="stylesheet" href="/styles/prism.css">
+  <!-- custom css -->
+  <link rel="stylesheet" href="/styles/reset.css" />
+  <link rel="stylesheet" href="/styles/styles.css" />
+</head>
+
+<body>
+  <div class="page-container">
+    <div class="header">
+      <div class="site-logo">
+        <a href="/">
+          <img src="/assets/images/eule-logo-250px.png" alt="logo image"
+            class="logo-img">
+        </a>
+        <div class="header-title plr-075"><a href="/">Eule CSS</a></div>
+      </div>
+      <div class="main-menu">
+        <div class="main-menu-item">
+          <a href="/">Home</a>
+        </div>
+        <div class="main-menu-item active">
+          <a href="/usage.html">Documentation</a>
+        </div>
+        <div class="main-menu-item">
+          <a href="/">Portfolio</a>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="col-3-9">
+          <div class="col-3 menu-col">
+            <div class="side-menu">
+              <div class="heading">Getting Started</div>
+              <div class="item ">
+                <a href="/usage.html">Usage</a>
+              </div>
+              <div class="heading">Components</div>
+              <div class="item active">
+                <a href="/components/layout.html">Layout</a>
+              </div>
+              <div class="item">
+                <a href="/components/avatar.html">Avatar</a>
+              </div>
+              <div class="item">
+                <a href="/components/alert.html">Alert</a>
+              </div>
+              <div class="item">
+                <a href="/components/badge.html">Badge</a>
+              </div>
+              <div class="item">
+                <a href="/components/button.html">Button</a>
+              </div>
+              <div class="item">
+                <a href="/components/card.html">Card</a>
+              </div>
+              <div class="item">
+                <a href="/components/image.html">Image</a>
+              </div>
+              <div class="item">
+                <a href="/components/input.html">Input</a>
+              </div>
+              <div class="item">
+                <a href="/components/text-utilities.html">Text
+
+                  Utilities</a>
+              </div>
+              <div class="item">
+                <a href="/components/lists.html">Lists</a>
+              </div>
+              <div class="item"><a
+                  href="/components/navigation.html">Navigation</a>
+              </div>
+              <div class="item">
+                <a href="/components/modal.html">Modal</a>
+              </div>
+              <div class="item">
+                <a href="/components/rating.html">Rating</a>
+              </div>
+              <div class="item">
+                <a href="/components/toast.html">Toast</a>
+              </div>
+              <div class="item">
+                <a href="/components/grid.html">Grid</a>
+              </div>
+              <div class="item"><a
+                  href="/components/navigation.html">Navigation</a>
+              </div>
+              <div class="item">
+                <a href="/components/slider.html">Slider</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-9">
+            <h1>Layout</h1>
+            <p>This library supports a 12-column grid layout and a fractional
+              style column layout</p>
+
+            <h2>12 Column Layout</h2>
+
+            <h3>12 Column Full Width</h3>
+
+            <div class="row row-full">
+              <div class="col-12 debug red-bg">12 Columns</div>
+            </div>
+
+            <div class="code-block">
+              <pre><code class="language-html">
+                &lt;div class="row row-full"&gt;
+                  &lt;div class="col-12"&gt;12 Columns&lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+
+            <h3>9 + 3 Columns Layout</h3>
+
+            <div class="row">
+              <div class="col-9-3">
+                <div class="col-9">9 Columns</div>
+                <div class="col-3">3 Columns</div>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre>
+              <code class="language-html">
+                &lt;div class="row"&gt;
+                  &lt;div class="col-9-3"&gt;
+                    &lt;div class="col-9"&gt;9 Columns&lt;/div&gt;
+                    &lt;div class="col-3"&gt;3 Columns&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+            </div>
+
+            <h3>8 + 4 Columns Layout</h3>
+
+
+            <div class="row">
+              <div class="col-8-4">
+                <div class="col-8">4 Columns</div>
+                <div class="col-4">8 Columns</div>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre>
+              <code class="language-html">
+                &lt;div class="row"&gt;
+                  &lt;div class="col-8-4"&gt;
+                    &lt;div class="col-8"&gt;4 Columns&lt;/div&gt;
+                    &lt;div class="col-4"&gt;8 Columns&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+            </div>
+
+            <h3>6 + 6 Columns Layout</h3>
+
+            <div class="row">
+              <div class="col-6-6">
+                <div class="col-6-1">6 Columns</div>
+                <div class="col-6-2">6 Columns</div>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre>
+              <code class="language-html">
+                &lt;div class="row"&gt;
+                  &lt;div class="col-6-6"&gt;
+                    &lt;div class="col-6-1"&gt;6 Columns&lt;/div&gt;
+                    &lt;div class="col-6-2"&gt;6 Columns&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+            </div>
+
+            <h3>4 + 8 Columns Layout</h3>
+
+            <div class="row">
+              <div class="col-4-8">
+                <div class="col-4">4 Columns</div>
+                <div class="col-8">8 Columns</div>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre>
+              <code class="language-html">
+                &lt;div class="row"&gt;
+                  &lt;div class="col-4-8"&gt;
+                    &lt;div class="col-4"&gt;4 Columns&lt;/div&gt;
+                    &lt;div class="col-8"&gt;8 Columns&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+            </div>
+
+            <h3>3 + 9 Columns Layout</h3>
+
+            <div class="row">
+              <div class="col-3-9">
+                <div class="col-3">3 Columns</div>
+                <div class="col-9">9 Columns</div>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre>
+              <code class="language-html">
+                &lt;div class="row"&gt;
+                  &lt;div class="col-3-9"&gt;
+                    &lt;div class="col-3"&gt;3 Columns&lt;/div&gt;
+                    &lt;div class="col-9"&gt;9 Columns&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+            </div>
+
+            <h3>2 + 8 + 2 Columns Layout</h3>
+
+            <div class="row">
+              <div class="col-2-8-2">
+                <div class="col-2-1">2 Columns</div>
+                <div class="col-8">8 Columns</div>
+                <div class="col-2-2">2 Columns</div>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre>
+              <code class="language-html">
+                &lt;div class="row"&gt;
+                  &lt;div class="col-2-8-2"&gt;
+                    &lt;div class="col-2-1"&gt;2 Columns&lt;/div&gt;
+                    &lt;div class="col-8"&gt;8 Columns&lt;/div&gt;
+                    &lt;div class="col-2-2"&gt;2 Columns&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+            </div>
+
+            <h3>4 + 4 + 4 Columns Layout</h3>
+
+            <div class="row">
+              <div class="col-4-4-4">
+                <div class="col-4-1">4 Columns</div>
+                <div class="col-4-2">4 Columns</div>
+                <div class="col-4-3">4 Columns</div>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre>
+              <code class="language-html">
+                &lt;div class="row"&gt;
+                  &lt;div class="col-4-4-4"&gt;
+                    &lt;div class="col-4-1"&gt;4 Columns&lt;/div&gt;
+                    &lt;div class="col-4-2"&gt;4 Columns&lt;/div&gt;
+                    &lt;div class="col-4-3"&gt;4 Columns&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+            </div>
+
+            <h3>3 + 6 + 3 Columns Layout</h3>
+
+            <div class="row">
+              <div class="col-3-6-3">
+                <div class="col-3-1">3 Columns</div>
+                <div class="col-6">6 Columns</div>
+                <div class="col-3-2">3 Columns</div>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre>
+              <code class="language-html">
+                &lt;div class="row"&gt;
+                  &lt;div class="col-3-6-3"&gt;
+                    &lt;div class="col-3-1"&gt;3 Columns&lt;/div&gt;
+                    &lt;div class="col-6"&gt;6 Columns&lt;/div&gt;
+                    &lt;div class="col-3-2"&gt;3 Columns&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <h1>Footer</h1>
+    </div>
+  </div>
+  <!-- syntax highlighting -->
+  <script src="/scripts/prism.js"></script>
+  <!-- connecting javascript files -->
+  <script src="/scripts/script.js"></script>
+</body>
+
+</html>

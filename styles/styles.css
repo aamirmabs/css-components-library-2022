@@ -23,6 +23,12 @@
   --info-bg: #d1f2f8;
   --info-text: #047c94;
 
+  /* used to debug by showing borders */
+  --test-debug: #f75b5b;
+  --debug-red: #ffb1b1;
+  --debug-blue: #b1d3ff;
+  --debug-green: #c1ffb1;
+
   /* color pallettes */
   --test-red: #fff3f3;
   --red: #e44343;
@@ -90,6 +96,9 @@
   --black-700: #060606;
   --black-900: #0a0a0a;
 
+  /* other custom colors */
+  --side-menu-bg: #08336b;
+
   /* fonts */
   --body-font: "Roboto Slab", serif;
   --heading-font: "Montserrat", sans-serif;
@@ -144,13 +153,15 @@ a:hover {
 }
 
 .page-container .header {
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
   min-height: 5vh;
   font-family: var(--heading-font);
   padding: 1rem;
+
+  background-color: var(--blue-100);
 }
 .page-container .content {
-  background-color: var(--test-green);
+  /* background-color: var(--test-green); */
   padding: 0.25rem;
   flex-grow: 2;
 
@@ -159,10 +170,12 @@ a:hover {
   flex-direction: column;
 }
 .page-container .footer {
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
   padding: 1rem;
   min-height: 5vh;
   font-family: var(--heading-font);
+
+  background-color: var(--blue-300);
 }
 /* -- END STRUCTURAL LAYOUT -- */
 
@@ -174,6 +187,19 @@ a:hover {
 }
 
 /* --- START 12 COLUMNS --- */
+.debug {
+  border: 2px solid var(--test-debug);
+}
+.debug.red-bg {
+  background-color: var(--debug-red);
+}
+.debug .blue-bg {
+  background-color: var(--debug-blue);
+}
+.debug .green-bg {
+  background-color: var(--debug-green);
+}
+
 .row.row-full {
   width: 100%;
   display: grid;
@@ -185,7 +211,8 @@ a:hover {
 
 .row-full .col-12 {
   grid-area: col-12;
-  background-color: var(--test-red);
+  padding: 1rem;
+  /* background-color: var(--test-red); */
 }
 
 .row.row-full-centered {
@@ -196,7 +223,7 @@ a:hover {
 }
 
 .row-full-centered .col-12 {
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
   align-self: center;
   margin-top: auto;
   margin-bottom: auto;
@@ -216,12 +243,12 @@ a:hover {
 .col-6-6 .col-6-1 {
   padding: 1rem;
   grid-area: col-6-1;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 .col-6-6 .col-6-2 {
   padding: 1rem;
   grid-area: col-6-2;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
 }
 /* --- END 6-6 COLUMNS --- */
 
@@ -238,12 +265,12 @@ a:hover {
 .col-4-8 .col-4 {
   padding: 1rem;
   grid-area: col-4;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 .col-4-8 .col-8 {
   padding: 1rem;
   grid-area: col-8;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
 }
 /* --- END 4-8 COLUMNS --- */
 
@@ -260,12 +287,12 @@ a:hover {
 .col-8-4 .col-4 {
   padding: 1rem;
   grid-area: col-4;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
 }
 .col-8-4 .col-8 {
   padding: 1rem;
   grid-area: col-8;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 /* --- END 4-8 COLUMNS --- */
 
@@ -282,12 +309,17 @@ a:hover {
 .col-3-9 .col-3 {
   padding: 1rem;
   grid-area: col-3;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 .col-3-9 .col-9 {
   padding: 1rem;
   grid-area: col-9;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
+}
+
+/* background for side menu */
+.col-3-9 .col-3.menu-col {
+  background-color: var(--side-menu-bg);
 }
 /* --- END 3-9 COLUMNS --- */
 
@@ -304,12 +336,12 @@ a:hover {
 .col-9-3 .col-3 {
   padding: 1rem;
   grid-area: col-3;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
 }
 .col-9-3 .col-9 {
   padding: 1rem;
   grid-area: col-9;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 /* --- END 3-9 COLUMNS --- */
 
@@ -326,19 +358,19 @@ a:hover {
 .col-2-8-2 .col-2-1 {
   padding: 1rem;
   grid-area: col-2-1;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 
 .col-2-8-2 .col-8 {
   padding: 1rem;
   grid-area: col-8;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
 }
 
 .col-2-8-2 .col-2-2 {
   padding: 1rem;
   grid-area: col-2-2;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 /* --- END 2-8-2 COLUMNS --- */
 
@@ -355,19 +387,19 @@ a:hover {
 .col-4-4-4 .col-4-1 {
   padding: 1rem;
   grid-area: col-4-1;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 
 .col-4-4-4 .col-4-2 {
   padding: 1rem;
   grid-area: col-4-2;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
 }
 
 .col-4-4-4 .col-4-3 {
   padding: 1rem;
   grid-area: col-4-3;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 /* --- END 4-4-4 COLUMNS --- */
 
@@ -384,19 +416,19 @@ a:hover {
 .col-3-6-3 .col-3-1 {
   padding: 1rem;
   grid-area: col-3-1;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 
 .col-3-6-3 .col-6 {
   padding: 1rem;
   grid-area: col-6;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
 }
 
 .col-3-6-3 .col-3-2 {
   padding: 1rem;
   grid-area: col-3-2;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 /* --- END 3-6-3 COLUMNS --- */
 
@@ -880,6 +912,7 @@ a:hover {
 .content .side-menu {
   font-family: var(--heading-font);
   color: var(--black);
+  background-color: var(--white-900);
 }
 
 .side-menu .heading {
