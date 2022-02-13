@@ -23,6 +23,12 @@
   --info-bg: #d1f2f8;
   --info-text: #047c94;
 
+  /* used to debug by showing borders */
+  --test-debug: #6b6b6b;
+  --debug-shade-1: #d7e9ff;
+  --debug-shade-2: #b1d3ff;
+  --debug-shade-3: #86bbff;
+
   /* color pallettes */
   --test-red: #fff3f3;
   --red: #e44343;
@@ -90,6 +96,9 @@
   --black-700: #060606;
   --black-900: #0a0a0a;
 
+  /* other custom colors */
+  --side-menu-bg: #08336b;
+
   /* fonts */
   --body-font: "Roboto Slab", serif;
   --heading-font: "Montserrat", sans-serif;
@@ -144,14 +153,16 @@ a:hover {
 }
 
 .page-container .header {
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
   min-height: 5vh;
   font-family: var(--heading-font);
   padding: 1rem;
+
+  background-color: var(--blue-100);
 }
 .page-container .content {
-  background-color: var(--test-green);
-  padding: 0.25rem;
+  /* background-color: var(--test-green); */
+  padding: 0.05%;
   flex-grow: 2;
 
   /* styles for rows and columns */
@@ -159,14 +170,156 @@ a:hover {
   flex-direction: column;
 }
 .page-container .footer {
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
   padding: 1rem;
   min-height: 5vh;
   font-family: var(--heading-font);
+
+  background-color: var(--blue-300);
 }
 /* -- END STRUCTURAL LAYOUT -- */
 
-/* -- START COLUMN LAYOUTS -- */
+/* -- START DEBUGGING STYLES -- */
+.debug {
+  border: 1px solid var(--test-debug);
+}
+.debug.debug-bg-1 {
+  background-color: var(--debug-shade-1);
+}
+.debug.debug-bg-2 {
+  background-color: var(--debug-shade-2);
+}
+.debug.debug-bg-3 {
+  background-color: var(--debug-shade-3);
+}
+.debug-all {
+  border: 1px solid var(--test-debug);
+}
+.debug-all * {
+  border: 1px solid var(--test-debug);
+}
+/* -- END DEBUGGING STYLES -- */
+
+/* -- START FRACTIONAL COLUMN LAYOUTS -- */
+
+/* --- START ONE COLUMN FRACTIONAL --- */
+.content .layout-one-col {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem;
+  width: 100%;
+}
+.layout-one-col .one-col {
+  padding: 0.2%;
+}
+/* --- END ONE COLUMN FRACTIONAL --- */
+
+/* --- START TWO COLUMN FRACTIONAL --- */
+.content .layout-two-cols {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: auto;
+  padding: 0rem;
+}
+.layout-two-cols .one-col {
+  padding: 0.2%;
+  width: 49.125%;
+}
+.layout-two-cols .two-cols {
+  padding: 0.25%;
+  width: 99.5%;
+}
+/* --- END TWO COLUMN FRACTIONAL --- */
+
+/* --- START THREE COLUMN FRACTIONAL --- */
+.content .layout-three-cols {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0rem;
+}
+.layout-three-cols .one-col {
+  padding: 0.2%;
+  width: 32.4%;
+}
+.layout-three-cols .two-cols {
+  padding: 0.2%;
+  width: 65.8%;
+}
+.layout-three-cols .three-cols {
+  padding: 0.2%;
+  width: 99.8%;
+}
+/* --- END THREE COLUMN FRACTIONAL --- */
+
+/* --- START FOUR COLUMN FRACTIONAL --- */
+.content .layout-four-cols {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0rem;
+}
+.layout-four-cols .one-col {
+  padding: 0.2%;
+  width: 24.32%;
+}
+.layout-four-cols .two-cols {
+  padding: 0.2%;
+  width: 49.45%;
+}
+.layout-four-cols .two-cols + .two-cols {
+  padding: 0.2%;
+  width: 49.27%;
+}
+.layout-four-cols .three-cols {
+  padding: 0.2%;
+  width: 74.4%;
+}
+.layout-four-cols .four-cols {
+  padding: 0.2%;
+  width: 99.8%;
+}
+/* --- END FOUR COLUMN FRACTIONAL --- */
+
+/* --- START FIVE COLUMN FRACTIONAL --- */
+.content .layout-five-cols {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0rem;
+}
+.layout-five-cols .one-col {
+  padding: 0.2%;
+  width: 19.35%;
+}
+.layout-five-cols .two-cols {
+  padding: 0.2%;
+  width: 39.35%;
+}
+.layout-five-cols .three-cols {
+  padding: 0.2%;
+  width: 59.3%;
+}
+.layout-five-cols .four-cols {
+  padding: 0.2%;
+  width: 79.35%;
+}
+.layout-five-cols .five-cols {
+  padding: 0.2%;
+  width: 99.6%;
+}
+/* --- END FIVE COLUMN FRACTIONAL --- */
+
+/* -- END FRACTIONAL COLUMN LAYOUTS -- */
+
+/* -- START 12 COLUMN LAYOUTS -- */
 .content .row {
   display: flex;
   flex-direction: row;
@@ -185,7 +338,8 @@ a:hover {
 
 .row-full .col-12 {
   grid-area: col-12;
-  background-color: var(--test-red);
+  padding: 1rem;
+  /* background-color: var(--test-red); */
 }
 
 .row.row-full-centered {
@@ -196,7 +350,7 @@ a:hover {
 }
 
 .row-full-centered .col-12 {
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
   align-self: center;
   margin-top: auto;
   margin-bottom: auto;
@@ -216,12 +370,12 @@ a:hover {
 .col-6-6 .col-6-1 {
   padding: 1rem;
   grid-area: col-6-1;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 .col-6-6 .col-6-2 {
   padding: 1rem;
   grid-area: col-6-2;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
 }
 /* --- END 6-6 COLUMNS --- */
 
@@ -238,12 +392,12 @@ a:hover {
 .col-4-8 .col-4 {
   padding: 1rem;
   grid-area: col-4;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 .col-4-8 .col-8 {
   padding: 1rem;
   grid-area: col-8;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
 }
 /* --- END 4-8 COLUMNS --- */
 
@@ -260,12 +414,12 @@ a:hover {
 .col-8-4 .col-4 {
   padding: 1rem;
   grid-area: col-4;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
 }
 .col-8-4 .col-8 {
   padding: 1rem;
   grid-area: col-8;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 /* --- END 4-8 COLUMNS --- */
 
@@ -282,12 +436,17 @@ a:hover {
 .col-3-9 .col-3 {
   padding: 1rem;
   grid-area: col-3;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 .col-3-9 .col-9 {
   padding: 1rem;
   grid-area: col-9;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
+}
+
+/* background for side menu */
+.col-3-9 .col-3.menu-col {
+  background-color: var(--side-menu-bg);
 }
 /* --- END 3-9 COLUMNS --- */
 
@@ -304,12 +463,12 @@ a:hover {
 .col-9-3 .col-3 {
   padding: 1rem;
   grid-area: col-3;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
 }
 .col-9-3 .col-9 {
   padding: 1rem;
   grid-area: col-9;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 /* --- END 3-9 COLUMNS --- */
 
@@ -326,19 +485,19 @@ a:hover {
 .col-2-8-2 .col-2-1 {
   padding: 1rem;
   grid-area: col-2-1;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 
 .col-2-8-2 .col-8 {
   padding: 1rem;
   grid-area: col-8;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
 }
 
 .col-2-8-2 .col-2-2 {
   padding: 1rem;
   grid-area: col-2-2;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 /* --- END 2-8-2 COLUMNS --- */
 
@@ -355,19 +514,19 @@ a:hover {
 .col-4-4-4 .col-4-1 {
   padding: 1rem;
   grid-area: col-4-1;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 
 .col-4-4-4 .col-4-2 {
   padding: 1rem;
   grid-area: col-4-2;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
 }
 
 .col-4-4-4 .col-4-3 {
   padding: 1rem;
   grid-area: col-4-3;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 /* --- END 4-4-4 COLUMNS --- */
 
@@ -384,23 +543,23 @@ a:hover {
 .col-3-6-3 .col-3-1 {
   padding: 1rem;
   grid-area: col-3-1;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 
 .col-3-6-3 .col-6 {
   padding: 1rem;
   grid-area: col-6;
-  background-color: var(--test-blue);
+  /* background-color: var(--test-blue); */
 }
 
 .col-3-6-3 .col-3-2 {
   padding: 1rem;
   grid-area: col-3-2;
-  background-color: var(--test-red);
+  /* background-color: var(--test-red); */
 }
 /* --- END 3-6-3 COLUMNS --- */
 
-/* -- END COLUMN LAYOUTS -- */
+/* -- END 12 COLUMN LAYOUTS -- */
 
 /* -- START PREV-NEXT NAV -- */
 
@@ -880,6 +1039,7 @@ a:hover {
 .content .side-menu {
   font-family: var(--heading-font);
   color: var(--black);
+  background-color: var(--white-900);
 }
 
 .side-menu .heading {
