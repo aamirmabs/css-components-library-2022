@@ -24,7 +24,7 @@
   --info-text: #047c94;
 
   /* color pallettes */
-  --test-red: #fff5f5;
+  --test-red: #fff3f3;
   --red: #e44343;
   --red-100: #facbcb;
   --red-300: #e77777;
@@ -32,7 +32,7 @@
   --red-700: #a11e1e;
   --red-900: #751313;
 
-  --test-green: #ebfff3;
+  --test-green: #effff5;
   --green: #2fc769;
   --green-100: #c1f7d5;
   --green-300: #69e699;
@@ -40,7 +40,7 @@
   --green-700: #128d41;
   --green-900: #045523;
 
-  --test-blue: #eff6ff;
+  --test-blue: #f2f8ff;
   --blue: #2f71c7;
   --blue-100: #c4dcfa;
   --blue-300: #6399e0;
@@ -191,12 +191,15 @@ a:hover {
 .row.row-full-centered {
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  margin: auto;
 }
 
 .row-full-centered .col-12 {
   background-color: var(--test-red);
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 /* --- END 12 COLUMNS --- */
 
@@ -368,6 +371,35 @@ a:hover {
 }
 /* --- END 4-4-4 COLUMNS --- */
 
+/* --- START 3-6-3 COLUMNS --- */
+.row .col-3-6-3 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0rem 0rem;
+  grid-template-areas: "col-3-1 col-6 col-3-2";
+}
+
+.col-3-6-3 .col-3-1 {
+  padding: 1rem;
+  grid-area: col-3-1;
+  background-color: var(--test-red);
+}
+
+.col-3-6-3 .col-6 {
+  padding: 1rem;
+  grid-area: col-6;
+  background-color: var(--test-blue);
+}
+
+.col-3-6-3 .col-3-2 {
+  padding: 1rem;
+  grid-area: col-3-2;
+  background-color: var(--test-red);
+}
+/* --- END 3-6-3 COLUMNS --- */
+
 /* -- END COLUMN LAYOUTS -- */
 
 /* -- START PREV-NEXT NAV -- */
@@ -509,8 +541,17 @@ a:hover {
 .w-50 {
   width: 50%;
 }
+.w-30 {
+  width: 30%;
+}
 .w-25 {
   width: 25%;
+}
+.w-20 {
+  width: 20%;
+}
+.w-10 {
+  width: 10%;
 }
 .w-5 {
   width: 100%;
