@@ -121,10 +121,12 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
+  padding: 0.5rem 0rem;
 }
 
 p {
-  line-height: 1.75rem;
+  line-height: 1.25rem;
+  padding: 0.25rem 0rem;
 }
 
 a {
@@ -1315,8 +1317,6 @@ a:hover {
 
 /* - START BADGES CSS - */
 
-/* -- START HEADING BADGES -- */
-
 .with-badge .badge {
   padding: 0.75em 0.5rem;
   margin: 0rem 0.5rem;
@@ -1327,6 +1327,52 @@ a:hover {
   color: var(--white-100);
 }
 
+/* -- START BADGE COLORS -- */
+
+.badge.badge-primary {
+  background: var(--primary);
+  border-color: var(--white);
+}
+
+.badge.badge-secondary {
+  background: var(--secondary);
+  border-color: var(--white);
+}
+
+.badge.badge-success {
+  background: var(--success);
+  border-color: var(--white);
+}
+
+.badge.badge-danger {
+  background: var(--danger);
+  border-color: var(--white);
+}
+
+.badge.badge-warning {
+  background: var(--warning);
+  border-color: var(--white);
+}
+
+.badge.badge-info {
+  background: var(--info);
+  border-color: var(--white);
+}
+
+.badge.badge-light {
+  background: var(--light);
+  border-color: var(--white);
+}
+
+.badge.badge-dark {
+  background: var(--dark);
+  border-color: var(--white);
+}
+
+/* -- START BADGE COLORS -- */
+
+/* -- START HEADING BADGES -- */
+
 h1.with-badge,
 h2.with-badge,
 h3.with-badge,
@@ -1335,9 +1381,9 @@ h5.with-badge,
 h6.with-badge,
 p.with-badge {
   display: flex;
-  justify-content: flex-start;
-  vertical-align: middle;
-  padding: 0.5rem 0rem;
+  /* justify-content: flex-start; */
+  /* vertical-align: middle; */
+  /* padding: 0.5rem 0rem; */
 }
 h1.with-badge .badge {
   padding: 0.5rem 0.5rem;
