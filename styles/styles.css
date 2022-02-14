@@ -24,7 +24,7 @@
   --info-text: #047c94;
 
   /* used to debug by showing borders */
-  --test-debug: #6b6b6b;
+  --test-debug: #000000;
   --debug-shade-1: #d7e9ff;
   --debug-shade-2: #b1d3ff;
   --debug-shade-3: #86bbff;
@@ -1312,3 +1312,51 @@ a:hover {
 }
 
 /* - END ALERTS CSS - */
+
+/* - START BADGES CSS - */
+h1.with-badge,
+h2.with-badge,
+h3.with-badge,
+h4.with-badge,
+h5.with-badge,
+h6.with-badge,
+p.with-badge {
+  display: flex;
+  justify-content: flex-start;
+  vertical-align: middle;
+  padding: 0.5rem 0rem;
+}
+h1.with-badge .badge {
+  padding: 0.5rem 0.5rem;
+}
+h2.with-badge .badge {
+  padding: 0.45rem 0.5rem;
+}
+
+h3.with-badge .badge {
+  padding: 0.4rem 0.45rem;
+}
+h4.with-badge .badge {
+  padding: 0.35rem 0.45rem;
+}
+
+h5.with-badge .badge {
+  padding: 0.3rem 0.4rem;
+}
+h6.with-badge .badge {
+  padding: 0.25rem 0.35rem;
+}
+p.with-badge .badge {
+  padding: 0.25rem 0.35rem;
+}
+
+.with-badge .badge {
+  padding: 0.5rem;
+  margin: 0rem 0.5rem;
+  font-size: 0.5em;
+  border-radius: 10%;
+  font-weight: 700;
+  background-color: var(--gray-900);
+  color: var(--white-100);
+}
+/* - END BADGES CSS - */
