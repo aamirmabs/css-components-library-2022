@@ -200,22 +200,26 @@
               </pre>
             </div>
 
-            <h2>Badge Colors</h2>
-            <p>To use the badge with a heading, use the <code
-                class="language-plain">with-badge</code> class for the heading
-              tag. Inside the heading, use a <code
-                class="language-plain">span</code> tag with a <code
-                class="language-plain">badge</code> class as shown below.
+            <h2>Badge with Background Colors</h2>
+            <p>To set the
+              Background color of the badge, use the color name with a <code
+                class="language-plain">badge-</code>, for example, to use the
+              <code class="language-plain">danger</code> color, use <code
+                class="language-plain">badge-danger</code>. Badges use the
+              standard named colours as defined in the color
+              pallette. The available options are <code
+                class="language-plain">Blue, Gray, Green, Red, Yellow, Cyan</code>.
+              and <code class="language-plain">Black</code>.
             </p>
             <div>
               <h3 class="with-badge">Badges can be
                 <span class="badge badge-primary">Blue</span>
-                <span class="badge badge-secondary">secondary</span>
-                <span class="badge badge-success">success</span>
-                <span class="badge badge-danger">danger</span>
-                <span class="badge badge-warning">warning</span>
-                <span class="badge badge-info">info</span>
-                <span class="badge badge-dark">dark</span>
+                <span class="badge badge-secondary">Gray</span>
+                <span class="badge badge-success">Green</span>
+                <span class="badge badge-danger">Red</span>
+                <span class="badge badge-warning">Yellow</span>
+                <span class="badge badge-info">Cyan</span>
+                <span class="badge badge-dark">Black</span>
               </h3>
             </div>
             <div class="code-block">
@@ -223,69 +227,124 @@
                 <code class="language-html">
                   &lt;h3 class="with-badge"&gt;Badges can be
                     &lt;span class="badge badge-primary"&gt;Blue&lt;/span&gt;
-                    &lt;span class="badge badge-secondary"&gt;secondary&lt;/span&gt;
-                    &lt;span class="badge badge-success"&gt;success&lt;/span&gt;
-                    &lt;span class="badge badge-danger"&gt;danger&lt;/span&gt;
-                    &lt;span class="badge badge-warning"&gt;warning&lt;/span&gt;
-                    &lt;span class="badge badge-info"&gt;info&lt;/span&gt;
-                    &lt;span class="badge badge-dark"&gt;dark&lt;/span&gt;
+                    &lt;span class="badge badge-secondary"&gt;Gray&lt;/span&gt;
+                    &lt;span class="badge badge-success"&gt;Green&lt;/span&gt;
+                    &lt;span class="badge badge-danger"&gt;Red&lt;/span&gt;
+                    &lt;span class="badge badge-warning"&gt;Yellow&lt;/span&gt;
+                    &lt;span class="badge badge-info"&gt;Cyan&lt;/span&gt;
+                    &lt;span class="badge badge-dark"&gt;Black&lt;/span&gt;
                   &lt;/h3&gt;
                 </code>
               </pre>
             </div>
 
             <h2>Badges with Buttons</h2>
-            <p>Alerts come in <code class="language-plain">primary</code>.
+            <p>Badges can be used with buttons by using the <code
+                class="language-plain">with-badge</code> class. Inside the
+              button, the button text is enclosed in a <code
+                class="language-plain">btn-text</code> class and the badge
+              content is enclosed in a <code class="language-plain">badge</code>
+              class.
+            </p>
             <div>
               <button class="btn btn-xs with-badge">
                 <span class="btn-text">Button</span>
-                <span class="badge">xXx</span>
+                <span class="badge">X</span>
               </button>
               <button class="btn btn-s with-badge">
                 <span class="btn-text">Button</span>
-                <span class="badge">xXx</span>
+                <span class="badge badge-warning">X</span>
               </button>
               <button class="btn btn-m with-badge">
                 <span class="btn-text">Button</span>
-                <span class="badge">xXx</span>
+                <span class="badge badge-dark">X</span>
               </button>
               <button class="btn btn-l with-badge">
                 <span class="btn-text">Button</span>
-                <span class="badge">xXx</span>
+                <span class="badge badge-warning">X</span>
               </button>
               <button class="btn btn-xl with-badge">
                 <span class="btn-text">Button</span>
-                <span class="badge">xXx</span>
+                <span class="badge">X</span>
               </button>
             </div>
             <div class="code-block">
               <pre>
                 <code class="language-html">
-                  &lt;div class="alert"&gt;
+                  &lt;button class="btn btn-xs with-badge"&gt;
+                    &lt;span class="btn-text"&gt;Button&lt;/span&gt;
+                    &lt;span class="badge"&gt;X&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;button class="btn btn-s with-badge"&gt;
+                    &lt;span class="btn-text"&gt;Button&lt;/span&gt;
+                    &lt;span class="badge"&gt;X&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;button class="btn btn-m with-badge"&gt;
+                    &lt;span class="btn-text"&gt;Button&lt;/span&gt;
+                    &lt;span class="badge"&gt;X&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;button class="btn btn-l with-badge"&gt;
+                    &lt;span class="btn-text"&gt;Button&lt;/span&gt;
+                    &lt;span class="badge"&gt;X&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;button class="btn btn-xl with-badge"&gt;
+                    &lt;span class="btn-text"&gt;Button&lt;/span&gt;
+                    &lt;span class="badge"&gt;X&lt;/span&gt;
+                  &lt;/button&gt;
                 </code>
               </pre>
             </div>
 
             <h2>Badges with Positioning</h2>
-            <p>Alerts come in <code class="language-plain">primary</code>.
+            <p>Positioned badges use relative positioning at the parent node and
+              absolute positioning to set the position of the badge. They can
+              only be used with buttons using the <code
+                class="language-plain">btn</code> in conjunction with the <code
+                class="language-plain">with-badge</code> and <code
+                class="language-plain">positional</code> class. The badges can
+              be positioned on the top or the bottom by using the <code
+                class="language-plain">top</code> or <code
+                class="language-plain">bottom</code> class. The inner badge text
+              uses the <code class="language-plain">badge</code> and <code
+                class="language-plain">right</code> classes.
+            </p>
             <div>
+              <button class="btn btn-xl with-badge positional top">
+                <span class="btn-text">Button</span>
+                <span class="badge right">99+</span>
+              </button>
+              <button class="btn btn-xl with-badge positional bottom">
+                <span class="btn-text">Button</span>
+                <span class="badge right">99+</span>
+              </button>
+              <button class="btn btn-s with-badge positional top">
+                <span class="btn-text">Button</span>
+                <span class="badge right">99+</span>
+              </button>
+              <button class="btn btn-s with-badge positional bottom">
+                <span class="btn-text">Button</span>
+                <span class="badge right">99+</span>
+              </button>
             </div>
             <div class="code-block">
               <pre>
                 <code class="language-html">
-                  &lt;div class="alert"&gt;
-                </code>
-              </pre>
-            </div>
-
-            <h2>Badges with Background Color</h2>
-            <p>Alerts come in <code class="language-plain">primary</code>.
-            <div>
-            </div>
-            <div class="code-block">
-              <pre>
-                <code class="language-html">
-                  &lt;div class="alert"&gt;
+                  &lt;button class="btn btn-xl with-badge positional top"&gt;
+                    &lt;span class="btn-text"&gt;Button&lt;/span&gt;
+                    &lt;span class="badge right"&gt;99+&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;button class="btn btn-xl with-badge positional bottom"&gt;
+                    &lt;span class="btn-text"&gt;Button&lt;/span&gt;
+                    &lt;span class="badge right"&gt;99+&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;button class="btn btn-s with-badge positional top"&gt;
+                    &lt;span class="btn-text"&gt;Button&lt;/span&gt;
+                    &lt;span class="badge right"&gt;99+&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;button class="btn btn-s with-badge positional bottom"&gt;
+                    &lt;span class="btn-text"&gt;Button&lt;/span&gt;
+                    &lt;span class="badge right"&gt;99+&lt;/span&gt;
+                  &lt;/button&gt;
                 </code>
               </pre>
             </div>
