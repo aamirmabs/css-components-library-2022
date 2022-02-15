@@ -1331,6 +1331,10 @@ a:hover {
   color: var(--white-100);
 }
 
+.badge.pill-badge {
+  border-radius: 5rem;
+}
+
 /* -- START BADGE COLORS -- */
 
 .badge.badge-primary {
