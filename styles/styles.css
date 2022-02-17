@@ -25,16 +25,22 @@
 
   /* button color variations */
   --primary-btn-bg: #023c94;
+  --primary-btn-bg-hover: #0247ad;
   --primary-btn-text: #fafafa;
   --secondary-btn-bg: #404244;
+  --secondary-btn-bg-hover: #5f6163;
   --secondary-btn-text: #fafafa;
   --success-btn-bg: #064428;
+  --success-btn-bg-hover: #0a693e;
   --success-btn-text: #fafafa;
   --danger-btn-bg: #9c313c;
+  --danger-btn-bg-hover: #b13844;
   --danger-btn-text: #fafafa;
   --warning-btn-bg: #ffcd02;
+  --warning-btn-bg-hover: #ffd738;
   --warning-btn-text: #fafafa;
   --info-btn-bg: #00788d;
+  --info-btn-bg-hover: #0099b4;
   --info-btn-text: #fafafa;
 
   /* button text variations */
@@ -127,6 +133,14 @@
   --transition-fast: all 100ms ease-in-out;
   --transition-medium: all 300ms ease-in-out;
   --transition-slow: all 500ms ease-in-out;
+
+  /* shadows */
+  --shadow-s: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  --shadow-m: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  --shadow-l: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  --shadow-hover: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 body {
@@ -1478,25 +1492,67 @@ p.with-badge .badge {
 
 /* - END BADGES CSS - */
 
-/* -- START BUTTONS CSS -- */
+/* - START BUTTONS CSS - */
 
 .btn {
   display: inline-flex;
-  /* justify-content: center; */
-  /* vertical-align: middle; */
+
   padding: 0.5rem 0rem;
   margin: 0.25rem;
+
   border: none;
   border-radius: 0.25rem;
+
   font-family: var(--heading-font);
   font-size: 1rem;
+
   text-align: center;
   text-decoration: none;
+
   background-color: var(--blue-500);
   color: var(--white-100);
+
+  transition: var(--transition-fast);
+
+  box-shadow: var(--shadow-s);
+}
+.btn:hover {
+  box-shadow: var(--shadow-hover);
+}
+.btn-outline {
+  display: inline-flex;
+
+  padding: 0.5rem 0rem;
+  margin: 0.25rem;
+
+  border: 2px solid var(--blue-500);
+  border-radius: 0.25rem;
+
+  font-family: var(--heading-font);
+  font-size: 1rem;
+
+  text-align: center;
+  text-decoration: none;
+
+  background-color: var(--white-100);
+  color: var(--blue-500);
+
+  transition: var(--transition-fast);
+
+  box-shadow: var(--shadow-s);
+}
+.btn-outline:hover {
+  box-shadow: var(--shadow-m);
 }
 
 .btn a {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  /* padding: 0.5rem 0rem; */
+  margin: 0em;
+}
+.btn-outline a {
   display: inline-block;
   position: relative;
   z-index: 1;
@@ -1508,86 +1564,110 @@ p.with-badge .badge {
   align-self: center;
 }
 
-/* --- START BUTTON BORDER RADIUS CLASSES --- */
-.btn.rounded-xs {
+/* -- START BUTTON BORDER RADIUS CLASSES -- */
+.btn.rounded-xs,
+.btn-outline.rounded-xs {
   border-radius: 0.25rem;
 }
-.btn.rounded-s {
+.btn.rounded-s,
+.btn-outline.rounded-s {
   border-radius: 0.5rem;
 }
-.btn.rounded-m {
+.btn.rounded-m,
+.btn-outline.rounded-m {
   border-radius: 0.75rem;
 }
-.btn.rounded-l {
+.btn.rounded-l,
+.btn-outline.rounded-l {
   border-radius: 1.25rem;
 }
-.btn.rounded-xl {
+.btn.rounded-xl,
+.btn-outline.rounded-xl {
   border-radius: 2rem;
 }
-/* --- END BUTTON BORDER RADIUS CLASSES --- */
+/* -- END BUTTON BORDER RADIUS CLASSES -- */
 
-/* --- START BUTTON SIZE CLASSES --- */
-.btn.btn-xs {
+/* -- START BUTTON SIZE CLASSES -- */
+.btn.btn-xs,
+.btn-outline.btn-xs {
   padding: 0.5em 0.6rem;
   font-size: 0.7em;
 }
-.btn.btn-s {
+.btn.btn-s,
+.btn-outline.btn-s {
   padding: 0.5em 0.7rem;
   font-size: 0.8em;
 }
-.btn.btn-m {
+.btn.btn-m,
+.btn-outline.btn-m {
   padding: 0.5em 0.75rem;
   font-size: 0.9rem;
 }
-.btn.btn-l {
+.btn.btn-l,
+.btn-outline.btn-l {
   padding: 0.5em 0.8rem;
   font-size: 1.1em;
 }
-.btn.btn-xl {
+.btn.btn-xl,
+.btn-outline.btn-xl {
   padding: 0.5em 0.85rem;
   font-size: 1.3em;
 }
-/* --- END BUTTON SIZE CLASSES --- */
+/* -- END BUTTON SIZE CLASSES -- */
 
-/* --- START BUTTON COLOR CLASSES --- */
+/* -- START BUTTON COLOR CLASSES -- */
 
 .btn.btn-primary {
   background-color: var(--primary-btn-bg);
   color: var(--primary-btn-text);
 }
-
-.btn.btn-primary {
-  background-color: var(--primary-btn-bg);
-  color: var(--primary-btn-text);
+.btn.btn-primary:hover {
+  background-color: var(--primary-btn-bg-hover);
 }
 
 .btn.btn-secondary {
   background-color: var(--secondary-btn-bg);
   color: var(--secondary-btn-text);
 }
+.btn.btn-secondary:hover {
+  background-color: var(--secondary-btn-bg-hover);
+}
 
 .btn.btn-success {
   background-color: var(--success-btn-bg);
   color: var(--success-btn-text);
+}
+.btn.btn-success:hover {
+  background-color: var(--success-btn-bg-hover);
 }
 
 .btn.btn-danger {
   background-color: var(--danger-btn-bg);
   color: var(--danger-btn-text);
 }
+.btn.btn-danger:hover {
+  background-color: var(--danger-btn-bg-hover);
+}
 
 .btn.btn-warning {
   background-color: var(--warning-btn-bg);
   color: var(--warning-btn-text);
+}
+.btn.btn-warning:hover {
+  background-color: var(--warning-btn-bg-hover);
 }
 
 .btn.btn-info {
   background-color: var(--info-btn-bg);
   color: var(--info-btn-text);
 }
-/* --- END BUTTON COLOR CLASSES --- */
+/* -- END BUTTON COLOR CLASSES -- */
+.btn.btn-info:hover {
+  background-color: var(--info-btn-bg-hover);
+}
+/* -- END BUTTON COLOR CLASSES -- */
 
-/* --- START BUTTON TEXT COLOR CLASSES --- */
+/* -- START BUTTON TEXT COLOR CLASSES -- */
 
 .btn-text.btn-text-white {
   color: var(--btn-text-white);
@@ -1603,7 +1683,16 @@ p.with-badge .badge {
 }
 
 /* text color for links */
+.btn .btn-text {
+  border-radius: 0.25rem;
+}
+.btn-outline .btn-text {
+  border-radius: 0.25rem;
+}
 .btn .btn-text a {
+  color: var(--primary-btn-text);
+}
+.btn-outline .btn-text a {
   color: var(--primary-btn-text);
 }
 .btn-text.btn-text-white a {
@@ -1619,6 +1708,69 @@ p.with-badge .badge {
   color: var(--btn-text-gray-dark);
 }
 
-/* --- END BUTTON TEXT COLOR CLASSES --- */
+/* -- END BUTTON TEXT COLOR CLASSES -- */
 
-/* -- START BUTTONS CSS -- */
+/* -- START OUTLINE BUTTON CLASSES -- */
+
+.btn-outline.btn-primary {
+  border: 3px solid var(--primary-btn-bg);
+  color: var(--primary-text);
+}
+.btn-outline.btn-primary:hover {
+  border: 3px solid var(--primary-btn-bg);
+  background-color: var(--primary-btn-bg);
+  color: var(--primary-btn-text);
+}
+
+.btn-outline.btn-secondary {
+  border: 3px solid var(--secondary-btn-bg);
+  color: var(--secondary-text);
+}
+.btn-outline.btn-secondary:hover {
+  border: 3px solid var(--secondary-btn-bg);
+  background-color: var(--secondary-btn-bg);
+  color: var(--secondary-btn-text);
+}
+
+.btn-outline.btn-success {
+  border: 3px solid var(--success-btn-bg);
+  color: var(--success-text);
+}
+.btn-outline.btn-success:hover {
+  border: 3px solid var(--success-btn-bg);
+  background-color: var(--success-btn-bg);
+  color: var(--success-btn-text);
+}
+
+.btn-outline.btn-danger {
+  border: 3px solid var(--danger-btn-bg);
+  color: var(--danger-text);
+}
+.btn-outline.btn-danger:hover {
+  border: 3px solid var(--danger-btn-bg);
+  background-color: var(--danger-btn-bg);
+  color: var(--danger-btn-text);
+}
+
+.btn-outline.btn-warning {
+  border: 3px solid var(--warning-btn-bg);
+  color: var(--warning-text);
+}
+.btn-outline.btn-warning:hover {
+  border: 3px solid var(--warning-btn-bg);
+  background-color: var(--warning-btn-bg);
+  color: var(--warning-btn-text);
+}
+
+.btn-outline.btn-info {
+  border: 3px solid var(--info-btn-bg);
+  color: var(--info-text);
+}
+.btn-outline.btn-info:hover {
+  border: 3px solid var(--info-btn-bg);
+  background-color: var(--info-btn-bg);
+  color: var(--info-btn-text);
+}
+/* -- END OUTLINE BUTTON CLASSES -- */
+
+/* - END BUTTONS CSS - */
