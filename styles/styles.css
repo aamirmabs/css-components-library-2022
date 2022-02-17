@@ -1551,24 +1551,6 @@ p.with-badge .badge {
 
 /* --- START BUTTON COLOR CLASSES --- */
 
-/* link text color */
-.btn .btn-text a {
-  color: var(--primary-btn-text);
-}
-
-.btn-text.btn-text-white {
-  color: var(--btn-text-white);
-}
-.btn-text.btn-text-black {
-  color: var(--btn-text-black);
-}
-.btn-text.btn-text-gray-light {
-  color: var(--btn-text-gray-light);
-}
-.btn-text.btn-text-gray-dark {
-  color: var(--btn-text-gray-dark);
-}
-
 .btn.btn-primary {
   background-color: var(--primary-btn-bg);
   color: var(--primary-btn-text);
@@ -1604,5 +1586,39 @@ p.with-badge .badge {
   color: var(--info-btn-text);
 }
 /* --- END BUTTON COLOR CLASSES --- */
+
+/* --- START BUTTON TEXT COLOR CLASSES --- */
+
+.btn-text.btn-text-white {
+  color: var(--btn-text-white);
+}
+.btn-text.btn-text-black {
+  color: var(--btn-text-black);
+}
+.btn-text.btn-text-gray-light {
+  color: var(--btn-text-gray-light);
+}
+.btn-text.btn-text-gray-dark {
+  color: var(--btn-text-gray-dark);
+}
+
+/* text color for links */
+.btn .btn-text a {
+  color: var(--primary-btn-text);
+}
+.btn-text.btn-text-white a {
+  color: var(--btn-text-white);
+}
+.btn-text.btn-text-black a {
+  color: var(--btn-text-black);
+}
+.btn-text.btn-text-gray-light a {
+  color: var(--btn-text-gray-light);
+}
+.btn-text.btn-text-gray-dark a {
+  color: var(--btn-text-gray-dark);
+}
+
+/* --- END BUTTON TEXT COLOR CLASSES --- */
 
 /* -- START BUTTONS CSS -- */
