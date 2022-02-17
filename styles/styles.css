@@ -23,6 +23,26 @@
   --info-bg: #d1f2f8;
   --info-text: #047c94;
 
+  /* button color variations */
+  --primary-btn-bg: #023c94;
+  --primary-btn-text: #fafafa;
+  --secondary-btn-bg: #404244;
+  --secondary-btn-text: #fafafa;
+  --success-btn-bg: #064428;
+  --success-btn-text: #fafafa;
+  --danger-btn-bg: #9c313c;
+  --danger-btn-text: #fafafa;
+  --warning-btn-bg: #ffcd02;
+  --warning-btn-text: #fafafa;
+  --info-btn-bg: #00788d;
+  --info-btn-text: #fafafa;
+
+  /* button text variations */
+  --btn-text-white: #fdfdfd;
+  --btn-text-black: #212121;
+  --btn-text-gray-light: #bdbdbd;
+  --btn-text-gray-dark: #616161;
+
   /* used to debug by showing borders */
   --test-debug: #000000;
   --debug-shade-1: #d7e9ff;
@@ -1454,10 +1474,6 @@ p.with-badge .badge {
   padding: 0.25em 0.75em;
 }
 
-/* -- END BADGE POSITIONS -- */
-
-/* -- START BUTTON BADGES --  */
-
 /* -- END BUTTON BADGES --  */
 
 /* - END BADGES CSS - */
@@ -1478,6 +1494,14 @@ p.with-badge .badge {
   text-decoration: none;
   background-color: var(--blue-500);
   color: var(--white-100);
+}
+
+.btn a {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  /* padding: 0.5rem 0rem; */
+  margin: 0em;
 }
 
 .btn-text {
@@ -1523,6 +1547,62 @@ p.with-badge .badge {
   padding: 0.5em 0.85rem;
   font-size: 1.3em;
 }
-/* --- START BUTTON SIZE CLASSES --- */
+/* --- END BUTTON SIZE CLASSES --- */
+
+/* --- START BUTTON COLOR CLASSES --- */
+
+/* link text color */
+.btn .btn-text a {
+  color: var(--primary-btn-text);
+}
+
+.btn-text.btn-text-white {
+  color: var(--btn-text-white);
+}
+.btn-text.btn-text-black {
+  color: var(--btn-text-black);
+}
+.btn-text.btn-text-gray-light {
+  color: var(--btn-text-gray-light);
+}
+.btn-text.btn-text-gray-dark {
+  color: var(--btn-text-gray-dark);
+}
+
+.btn.btn-primary {
+  background-color: var(--primary-btn-bg);
+  color: var(--primary-btn-text);
+}
+
+.btn.btn-primary {
+  background-color: var(--primary-btn-bg);
+  color: var(--primary-btn-text);
+}
+
+.btn.btn-secondary {
+  background-color: var(--secondary-btn-bg);
+  color: var(--secondary-btn-text);
+}
+
+.btn.btn-success {
+  background-color: var(--success-btn-bg);
+  color: var(--success-btn-text);
+}
+
+.btn.btn-danger {
+  background-color: var(--danger-btn-bg);
+  color: var(--danger-btn-text);
+}
+
+.btn.btn-warning {
+  background-color: var(--warning-btn-bg);
+  color: var(--warning-btn-text);
+}
+
+.btn.btn-info {
+  background-color: var(--info-btn-bg);
+  color: var(--info-btn-text);
+}
+/* --- END BUTTON COLOR CLASSES --- */
 
 /* -- START BUTTONS CSS -- */
