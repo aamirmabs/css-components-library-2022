@@ -1938,5 +1938,18 @@ p.with-badge .badge {
   color: var(--gray-500);
 }
 /* -- END BUTTON DISABLED STATES -- */
+/* -- START BUTTONS WITH ICONS -- */
+
+.btn.with-icon,
+.btn-outline.with-icon {
+  font: inherit;
+}
+
+.btn i,
+.btn-outline i {
+  padding: 0rem 0.5rem;
+  align-self: center;
+}
+/* -- END BUTTONS WITH ICONS -- */
 
 /* - END BUTTONS CSS - */
