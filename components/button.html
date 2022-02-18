@@ -516,7 +516,9 @@
             </div>
 
             <h2>Buttons with Icons</h2>
-            <p>Paragraph <code class="language-plain">code</code>
+            <p>Font Awesome icons are used in this library. Use the class <code
+                class="language-plain">with-icon</code> to denote that an icon
+              will be used in the button.
             </p>
             <div class="fl-row fljc-sp-around">
               <button class="btn btn-m with-icon">
@@ -558,14 +560,51 @@
             </div>
 
             <h2>Floating Action Buttons</h2>
-            <p>Paragraph <code class="language-plain">code</code>
+            <p>Floating buttons need to be contained within a container class
+              <code class="language-plain">floating-button-container</code>.
+              Inside this container, a floating button with class<code
+                class="language-plain">floating-button</code> can be placed. The
+              default position of a floating button is the bottom right.
+              Additionally, the position can be changed by using one of the
+              additional positional classes namely: <code
+                class="language-plain">float-top-right, float-top-left, float-bottom-right</code>
+              and <code class="language-plain">float-bottom-left</code>.
             </p>
             <div>
+              <div class="floating-button-container debug debug-bg-1">
+                <button class="btn btn-m floating-button">
+                  T Right
+                </button>
+              </div>
+              <div class="floating-button-container debug debug-bg-1">
+                <button class="btn btn-m floating-button float-top-right">
+                  T Right
+                </button>
+              </div>
+              <div class="floating-button-container debug debug-bg-2">
+                <button class="btn btn-m floating-button float-bottom-right">
+                  B Right
+                </button>
+              </div>
+              <div class="floating-button-container debug debug-bg-1">
+                <button class="btn btn-m floating-button float-top-left">
+                  T Left
+                </button>
+              </div>
+              <div class="floating-button-container debug debug-bg-2">
+                <button class="btn btn-m floating-button float-bottom-left">
+                  B Left
+                </button>
+              </div>
             </div>
             <div class="code-block">
               <pre>
                 <code class="language-html">
-                  &lt;
+                  &lt;div class="floating-button-container"&gt;
+                    &lt;button&gt; class="btn btn-m floating-button float-top-right"&gt;
+                      T Right
+                    &lt;/button&gt;
+                  &lt;/div&gt;
                 </code>
               </pre>
             </div>
