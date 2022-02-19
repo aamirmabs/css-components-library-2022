@@ -244,7 +244,6 @@ a:hover {
 
 /* -- START GRID LAYOUTS -- */
 
-/* -- END GRID LAYOUTS -- */
 .grid {
   display: grid;
 }
@@ -261,6 +260,7 @@ a:hover {
 .grid-5 {
   grid-template-columns: 20% 20% 20% 20% 20%;
 }
+/* -- END GRID LAYOUTS -- */
 
 /* -- START FRACTIONAL COLUMN LAYOUTS -- */
 
@@ -2023,3 +2023,97 @@ p.with-badge .badge {
 /* -- END FLOATING ACTION BUTTONS -- */
 
 /* - END BUTTONS CSS - */
+
+/* START MEDIA QUERIES */
+/* M - Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* M - START grid layout - */
+
+  .grid {
+    display: grid;
+  }
+
+  .grid-2 {
+    grid-template-columns: 100%;
+  }
+  .grid-3 {
+    grid-template-columns: 100%;
+  }
+  .grid-4 {
+    grid-template-columns: 100%;
+  }
+  .grid-5 {
+    grid-template-columns: 100%;
+  }
+  /* M - END grid layout - */
+}
+
+/* T - Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  /* T - START grid layout - */
+
+  .grid {
+    display: grid;
+  }
+
+  .grid-2 {
+    grid-template-columns: 50% 50%;
+  }
+  .grid-3 {
+    grid-template-columns: 50% 50%;
+  }
+  .grid-4 {
+    grid-template-columns: 50% 50%;
+  }
+  .grid-5 {
+    grid-template-columns: 50% 50%;
+  }
+  /* T - END grid layout - */
+}
+
+/* D - Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  /* D - START grid layout - */
+
+  .grid {
+    display: grid;
+  }
+
+  .grid-2 {
+    grid-template-columns: 50% 50%;
+  }
+  .grid-3 {
+    grid-template-columns: 33% 33% 33%;
+  }
+  .grid-4 {
+    grid-template-columns: 33% 33% 33%;
+  }
+  .grid-5 {
+    grid-template-columns: 33% 33% 33%;
+  }
+  /* D - END grid layout - */
+}
+
+/* DX - Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /* DX - START grid layout - */
+
+  .grid {
+    display: grid;
+  }
+
+  .grid-2 {
+    grid-template-columns: 50% 50%;
+  }
+  .grid-3 {
+    grid-template-columns: 33% 33% 33%;
+  }
+  .grid-4 {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  .grid-5 {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+  }
+  /* DX - END grid layout - */
+}
+/* END MEDIA QUERIES */
