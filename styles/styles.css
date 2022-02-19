@@ -242,6 +242,26 @@ a:hover {
 }
 /* -- END DEBUGGING STYLES -- */
 
+/* -- START GRID LAYOUTS -- */
+
+/* -- END GRID LAYOUTS -- */
+.grid {
+  display: grid;
+}
+
+.grid-2 {
+  grid-template-columns: 50% 50%;
+}
+.grid-3 {
+  grid-template-columns: 33% 33% 33%;
+}
+.grid-4 {
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.grid-5 {
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
 /* -- START FRACTIONAL COLUMN LAYOUTS -- */
 
 /* --- START ONE COLUMN FRACTIONAL --- */
@@ -670,6 +690,10 @@ a:hover {
 
 .fl {
   display: flex;
+}
+.fl-center {
+  justify-content: center;
+  align-content: center;
 }
 
 .fl-col {
