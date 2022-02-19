@@ -1942,7 +1942,7 @@ p.with-badge .badge {
 
 .btn.with-icon,
 .btn-outline.with-icon {
-  font: inherit;
+  font-weight: inherit;
 }
 
 .btn i,
@@ -1995,6 +1995,7 @@ p.with-badge .badge {
   bottom: 1rem;
   left: 1rem;
   right: auto;
+  display: non;
 }
 /* -- END FLOATING ACTION BUTTONS -- */
 
