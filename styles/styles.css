@@ -2024,11 +2024,24 @@ p.with-badge .badge {
 
 /* - END BUTTONS CSS - */
 
+/* - START cards css - */
+
+/* -- START card containers -- */
+
+.cards-container {
+  padding: 0.25rem;
+  background-color: var(--white-500);
+}
+
+/* -- END card containers -- */
+
+/* - END cards css - */
+
 /* START MEDIA QUERIES */
 /* M - Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   /* M - START mobile menu layout - */
-  .page-container {
+  .page-container-grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
@@ -2041,7 +2054,7 @@ p.with-badge .badge {
     min-height: 100vh;
   }
 
-  .page-container .header {
+  .page-container-grid .header {
     grid-area: header;
     min-height: 5%;
     font-family: var(--heading-font);
@@ -2050,17 +2063,17 @@ p.with-badge .badge {
     max-height: 250px;
     padding: 0.5rem;
   }
-  .page-container .menu {
+  .page-container-grid .menu {
     grid-area: menu;
     padding: 0.5rem;
     background-color: var(--side-menu-bg);
     display: block;
   }
-  .page-container .content {
+  .page-container-grid .content {
     grid-area: content;
     padding: 0rem 0.5rem;
   }
-  .page-container .footer {
+  .page-container-grid .footer {
     grid-area: footer;
     padding: 1rem;
     min-height: 5%;
@@ -2069,11 +2082,11 @@ p.with-badge .badge {
   }
 
   /* M -- START mobile/desktop menu visibility -- */
-  .page-container .menu .mobile-menu {
+  .page-container-grid .menu .mobile-menu {
     padding: 0.05%;
     display: block;
   }
-  .page-container .menu .desktop-menu {
+  .page-container-grid .menu .desktop-menu {
     padding: 0.05%;
     display: none;
   }
@@ -2100,7 +2113,7 @@ p.with-badge .badge {
 @media only screen and (min-width: 600px) and (max-width: 768px) {
   /* T - START mobile menu layout - */
 
-  .page-container {
+  .page-container-grid {
     display: grid;
     grid-template-columns: 30% repeat(3, auto);
 
@@ -2112,7 +2125,7 @@ p.with-badge .badge {
       "footer footer footer footer";
     min-height: 100vh;
   }
-  .page-container .header {
+  .page-container-grid .header {
     grid-area: header;
     min-height: 5%;
     font-family: var(--heading-font);
@@ -2120,18 +2133,18 @@ p.with-badge .badge {
     background-color: var(--blue-100);
     max-height: 250px;
   }
-  .page-container .menu {
+  .page-container-grid .menu {
     grid-area: menu;
     padding: 0.5rem;
     background-color: var(--side-menu-bg);
     display: block;
   }
 
-  .page-container .content {
+  .page-container-grid .content {
     grid-area: content;
     padding: 0rem 0.5rem;
   }
-  .page-container .footer {
+  .page-container-grid .footer {
     grid-area: footer;
     padding: 1rem;
     min-height: 5%;
@@ -2139,11 +2152,11 @@ p.with-badge .badge {
     background-color: var(--blue-300);
   }
   /* T -- START mobile/desktop menu visibility -- */
-  .page-container .menu .mobile-menu {
+  .page-container-grid .menu .mobile-menu {
     padding: 0.05%;
     display: none;
   }
-  .page-container .menu .desktop-menu {
+  .page-container-grid .menu .desktop-menu {
     padding: 0.05%;
     display: block;
   }
@@ -2170,7 +2183,7 @@ p.with-badge .badge {
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
   /* D - START mobile menu layout - */
 
-  .page-container {
+  .page-container-grid {
     display: grid;
     grid-template-columns: 25% repeat(3, auto);
 
@@ -2182,7 +2195,7 @@ p.with-badge .badge {
       "footer footer footer footer";
     min-height: 100vh;
   }
-  .page-container .header {
+  .page-container-grid .header {
     grid-area: header;
     min-height: 5%;
     font-family: var(--heading-font);
@@ -2190,18 +2203,18 @@ p.with-badge .badge {
     background-color: var(--blue-100);
     max-height: 250px;
   }
-  .page-container .menu {
+  .page-container-grid .menu {
     grid-area: menu;
     padding: 0.5rem;
     background-color: var(--side-menu-bg);
     display: block;
   }
 
-  .page-container .content {
+  .page-container-grid .content {
     grid-area: content;
     padding: 0rem 0.5rem;
   }
-  .page-container .footer {
+  .page-container-grid .footer {
     grid-area: footer;
     padding: 1rem;
     min-height: 5%;
@@ -2210,11 +2223,11 @@ p.with-badge .badge {
   }
 
   /* D -- START mobile/desktop menu visibility -- */
-  .page-container .menu .mobile-menu {
+  .page-container-grid .menu .mobile-menu {
     padding: 0.05%;
     display: none;
   }
-  .page-container .menu .desktop-menu {
+  .page-container-grid .menu .desktop-menu {
     padding: 0.05%;
     display: block;
   }
@@ -2241,7 +2254,7 @@ p.with-badge .badge {
 @media only screen and (min-width: 1200px) {
   /* DX - START mobile menu layout - */
 
-  .page-container {
+  .page-container-grid {
     display: grid;
     grid-template-columns: 25% repeat(3, auto);
     grid-template-rows: repeat(3, auto);
@@ -2252,7 +2265,7 @@ p.with-badge .badge {
       "footer footer footer footer";
     min-height: 100vh;
   }
-  .page-container .header {
+  .page-container-grid .header {
     grid-area: header;
     min-height: 5%;
     font-family: var(--heading-font);
@@ -2260,18 +2273,18 @@ p.with-badge .badge {
     background-color: var(--blue-100);
     max-height: 250px;
   }
-  .page-container .menu {
+  .page-container-grid .menu {
     grid-area: menu;
     padding: 0.5rem;
     background-color: var(--side-menu-bg);
     display: block;
   }
 
-  .page-container .content {
+  .page-container-grid .content {
     grid-area: content;
     padding: 0rem 0.5rem;
   }
-  .page-container .footer {
+  .page-container-grid .footer {
     grid-area: footer;
     padding: 1rem;
     min-height: 5%;
@@ -2280,11 +2293,11 @@ p.with-badge .badge {
   }
 
   /* DX -- START mobile/desktop menu visibility -- */
-  .page-container .menu .mobile-menu {
+  .page-container-grid .menu .mobile-menu {
     padding: 0.05%;
     display: none;
   }
-  .page-container .menu .desktop-menu {
+  .page-container-grid .menu .desktop-menu {
     padding: 0.05%;
     display: block;
   }
