@@ -26,7 +26,7 @@
 </head>
 
 <body>
-  <div class="page-container-grid">
+  <div class="page-container">
     <div class="header">
       <div class="site-logo">
         <a href="/">
@@ -35,15 +35,20 @@
         </a>
         <div class="header-title plr-075"><a href="/">Eule CSS</a></div>
       </div>
-      <div class="main-menu">
-        <div class="main-menu-item">
-          <a href="/">Home</a>
+      <div class="menu-container">
+        <div class="main-menu">
+          <div class="main-menu-item">
+            <a href="/">Home</a>
+          </div>
+          <div class="main-menu-item active">
+            <a href="/usage.html">Documentation</a>
+          </div>
+          <div class="main-menu-item">
+            <a href="/">Portfolio</a>
+          </div>
         </div>
-        <div class="main-menu-item active">
-          <a href="/usage.html">Documentation</a>
-        </div>
-        <div class="main-menu-item">
-          <a href="/">Portfolio</a>
+        <div class="mobile-menu menu-icon">
+          <i class="fa fa-bars"></i>
         </div>
       </div>
     </div>
@@ -148,8 +153,103 @@
               </a>
             </div>
           </div>
-          <div class="col-9">
+          <div class="col-9 content-col">
             <h1>Heading</h1>
+
+            <!-- START Card containers section  -->
+            <h2>Card containers</h2>
+            <p>Cards are placed inside a card container named <code
+                class="language-plain">cards-container</code>. We can also
+              specify the number of columns that the container should have by
+              using the grid class <code class="language-plain">grid</code>
+              along with a class to specify the number of columns using <code
+                class="language-plain">grid-2, grid-3, grid-4</code> or <code
+                class="language-plain">grid-5</code>.
+            </p>
+            <div>
+              <h3>3 Column Card Grid</h3>
+              <div class="cards-container grid grid-2">
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+              </div>
+              <h3>3 Column Card Grid</h3>
+              <div class="cards-container grid grid-3">
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+              </div>
+              <h3>4 Column Card Grid</h3>
+              <div class="cards-container grid grid-4">
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+              </div>
+              <h3>5 Column Card Grid</h3>
+              <div class="cards-container grid grid-5">
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+              </div>
+            </div>
+            <!-- - START code block - -->
+            <div class="code-block">
+              <pre>
+                <code class="language-html">
+                  &lt;
+                </code>
+              </pre>
+            </div>
+            <!-- - END code block - -->
+            <!-- END Card containers section  -->
 
             <!-- START Cards with badges section  -->
             <h2>Cards with badges</h2>

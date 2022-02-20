@@ -1107,10 +1107,19 @@ a:hover {
   font-weight: 900;
 }
 
-.header .main-menu {
+.header .menu-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.header .menu-container .main-menu {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.header .menu-container .mobile-menu {
+  align-self: center;
+  display: block;
 }
 
 .main-menu .main-menu-item {
@@ -2027,19 +2036,54 @@ p.with-badge .badge {
 /* - START cards css - */
 
 /* -- START card containers -- */
-
 .cards-container {
   padding: 0.25rem;
   background-color: var(--white-500);
 }
-
 /* -- END card containers -- */
 
+/* -- START card  -- */
+.cards-container .card {
+  padding: 0.5rem;
+}
+/* -- END card  -- */
+
+/* - END cards css - */
+
+/* - START cards css - */
+/* -- START card containers -- */
+.cards-container {
+  padding: 0.25rem;
+  background-color: var(--white-300);
+}
+/* -- END card containers -- */
 /* - END cards css - */
 
 /* START MEDIA QUERIES */
 /* M - Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  /* M - START mobile menu visibility - normal layout - */
+  /* hiding and showing header mobile/main menu  */
+  .header .menu-container .main-menu {
+    display: none;
+  }
+  .header .menu-container .mobile-menu {
+    align-self: center;
+    display: block;
+  }
+  /* hiding the desktop menu column */
+  .col-3.menu-col {
+    display: none;
+  }
+  /* making the content area occupy full width by changing the row-col display from grid to block */
+  .row .col-3-9 {
+    display: block;
+  }
+  .col-9.content-col {
+    width: 100%;
+  }
+  /* M - END mobile menu visibility - normal layout - */
+
   /* M - START mobile menu layout - */
   .page-container-grid {
     display: grid;
@@ -2111,6 +2155,17 @@ p.with-badge .badge {
 
 /* T - Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 768px) {
+  /* T - START mobile menu visibility - normal layout - */
+  .header .menu-container .main-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .header .menu-container .mobile-menu {
+    align-self: center;
+    display: none;
+  }
+  /* T - END mobile menu visibility - normal layout - */
   /* T - START mobile menu layout - */
 
   .page-container-grid {
@@ -2181,6 +2236,18 @@ p.with-badge .badge {
 
 /* D - Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
+  /* D - START mobile menu visibility - normal layout - */
+  .header .menu-container .main-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .header .menu-container .mobile-menu {
+    align-self: center;
+    display: none;
+  }
+  /* D - END mobile menu visibility - normal layout - */
+
   /* D - START mobile menu layout - */
 
   .page-container-grid {
@@ -2252,6 +2319,18 @@ p.with-badge .badge {
 
 /* DX - Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  /* DX - START mobile menu visibility - normal layout - */
+  .header .menu-container .main-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .header .menu-container .mobile-menu {
+    align-self: center;
+    display: none;
+  }
+  /* DX - END mobile menu visibility - normal layout - */
+
   /* DX - START mobile menu layout - */
 
   .page-container-grid {
