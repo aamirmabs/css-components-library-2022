@@ -26,7 +26,7 @@
 </head>
 
 <body>
-  <div class="page-container-grid">
+  <div class="page-container">
     <div class="header">
       <div class="site-logo">
         <a href="/">
@@ -35,16 +35,119 @@
         </a>
         <div class="header-title plr-075"><a href="/">Eule CSS</a></div>
       </div>
-      <div class="main-menu">
-        <div class="main-menu-item">
-          <a href="/">Home</a>
+      <div class="menu-container">
+        <div class="main-menu">
+          <div class="main-menu-item">
+            <a href="/">Home</a>
+          </div>
+          <div class="main-menu-item active">
+            <a href="/usage.html">Documentation</a>
+          </div>
+          <div class="main-menu-item">
+            <a href="/">Portfolio</a>
+          </div>
         </div>
-        <div class="main-menu-item active">
-          <a href="/usage.html">Documentation</a>
+        <div class="mobile-menu menu-icon">
+          <i class="fa fa-bars"></i>
         </div>
-        <div class="main-menu-item">
-          <a href="/">Portfolio</a>
-        </div>
+      </div>
+    </div>
+
+    <div class="mobile-menu menu">
+      <div class="side-menu">
+        <div class="heading">Getting Started</div>
+        <a href="/usage.html">
+          <div class="item">
+            Usage
+          </div>
+        </a>
+        <div class="heading">Components</div>
+        <a href="/components/layout.html">
+          <div class="item">
+            Layout
+          </div>
+        </a>
+        <a href="/components/avatar.html">
+          <div class="item">
+            Avatar
+          </div>
+        </a>
+        <a href="/components/alert.html">
+          <div class="item">
+            Alert
+          </div>
+        </a>
+        <a href="/components/badge.html">
+          <div class="item">
+            Badge
+          </div>
+        </a>
+        <a href="/components/button.html">
+          <div class="item">
+            Button
+          </div>
+        </a>
+        <a href="/components/card.html">
+          <div class="item active">
+            Card
+          </div>
+        </a>
+        <a href="/components/image.html">
+          <div class="item">
+            Image
+          </div>
+        </a>
+        <a href="/components/input.html">
+          <div class="item">
+            Input
+          </div>
+        </a>
+        <a href="/components/text-utilities.html">
+          <div class="item">
+            Text
+            Utilities
+          </div>
+        </a>
+        <a href="/components/lists.html">
+          <div class="item">
+            Lists
+          </div>
+        </a>
+        <a href="/components/navigation.html">
+          <div class="item">
+            Navigation
+          </div>
+        </a>
+        <a href="/components/modal.html">
+          <div class="item">
+            Modal
+          </div>
+        </a>
+        <a href="/components/rating.html">
+          <div class="item">
+            Rating
+          </div>
+        </a>
+        <a href="/components/toast.html">
+          <div class="item">
+            Toast
+          </div>
+        </a>
+        <a href="/components/grid.html">
+          <div class="item">
+            Grid
+          </div>
+        </a>
+        <a href="/components/navigation.html">
+          <div class="item">
+            navigation
+          </div>
+        </a>
+        <a href="/components/slider.html">
+          <div class="item">
+            Slider
+          </div>
+        </a>
       </div>
     </div>
 
@@ -148,8 +251,194 @@
               </a>
             </div>
           </div>
-          <div class="col-9">
+          <div class="col-9 content-col">
             <h1>Heading</h1>
+
+            <!-- START Card containers section  -->
+            <h2>Card containers</h2>
+            <p>Cards are placed inside a card container named <code
+                class="language-plain">cards-container</code>. We can also
+              specify the number of columns that the container should have by
+              using the grid class <code class="language-plain">grid</code>
+              along with a class to specify the number of columns using <code
+                class="language-plain">grid-2, grid-3, grid-4</code> or <code
+                class="language-plain">grid-5</code>.
+            </p>
+            <div>
+              <h3>2 Column Card Grid</h3>
+              <div class="cards-container grid grid-2">
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+              </div>
+              <!-- - START code block - -->
+              <div class="code-block">
+                <pre>
+                  <code class="language-html">
+                    &lt;div class="cards-container grid grid-2"&gt;
+                      &lt;div class="card 1"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  </code>
+                </pre>
+              </div>
+              <!-- - END code block - -->
+              <h3>3 Column Card Grid</h3>
+              <div class="cards-container grid grid-3">
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+              </div>
+              <!-- - START code block - -->
+              <div class="code-block">
+                <pre>
+                  <code class="language-html">
+                    &lt;div class="cards-container grid grid-3"&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  </code>
+                </pre>
+              </div>
+              <!-- - END code block - -->
+              <h3>4 Column Card Grid</h3>
+              <div class="cards-container grid grid-4">
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+              </div>
+              <!-- - START code block - -->
+              <div class="code-block">
+                <pre>
+                  <code class="language-html">
+                    &lt;div class="cards-container grid grid-4"&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  </code>
+                </pre>
+              </div>
+              <!-- - END code block - -->
+              <h3>5 Column Card Grid</h3>
+              <div class="cards-container grid grid-5">
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-2">
+                  <h1>CARD</h1>
+                </div>
+                <div class="card debug debug-bg-1">
+                  <h1>CARD</h1>
+                </div>
+              </div>
+              <!-- - START code block - -->
+              <div class="code-block">
+                <pre>
+                  <code class="language-html">
+                    &lt;div class="cards-container grid grid-5"&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                      &lt;div class="card"&gt;
+                        &lt;h1&gt;CARD&lt;/h1&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  </code>
+                </pre>
+              </div>
+              <!-- - END code block - -->
+            </div>
+            <!-- END Card containers section  -->
 
             <!-- START Cards with badges section  -->
             <h2>Cards with badges</h2>
@@ -203,16 +492,51 @@
             <!-- END Cards with text overlay section  -->
 
             <!-- START Text only cards section  -->
-            <h2>Text only cards</h2>
+            <h2>Text Only Cards</h2>
             <p>Paragraph <code class="language-plain">code</code>
             </p>
-            <div>
+            <div class="cards-container grid grid-2">
+              <div class="card text-card">
+                <div class="text">Tenetur dignissimos incidunt ea enim alias
+                  suscipit pariatur natus ullam. Nulla eveniet libero
+                  dignissimos explicabo nisi!
+                </div>
+                <div class="buttons">
+                  <button class="btn btn-m btn-primary">
+                    Button
+                  </button>
+                </div>
+              </div>
+              <div class="card text-card">
+                <div class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Commodi nobis veritatis praesentium repellendus corporis iste
+                  a.
+                </div>
+                <div class="buttons">
+                  <button class="btn btn-m btn-primary">
+                    Button 1
+                  </button>
+                  <button class="btn btn-m btn-success">
+                    Button 2
+                  </button>
+                </div>
+              </div>
             </div>
             <!-- - START code block - -->
             <div class="code-block">
               <pre>
                 <code class="language-html">
-                  &lt;
+                  &lt;div class="card text-card"&gt;
+                    &lt;div class="text"&gt;
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    &lt;/div&gt;
+                    &lt;div class="buttons"&gt;
+                      &lt;button class="btn btn-m btn-primary"&gt;
+                        Button
+                      &lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
                 </code>
               </pre>
             </div>
