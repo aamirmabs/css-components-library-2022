@@ -251,7 +251,7 @@ a:hover {
   grid-template-columns: 50% 50%;
 }
 .grid-3 {
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 33.33% 33.33% 33.33%;
 }
 .grid-4 {
   grid-template-columns: 25% 25% 25% 25%;
@@ -2080,7 +2080,7 @@ p.with-badge .badge {
     display: block;
   }
   .col-9.content-col {
-    width: 100%;
+    width: auto;
   }
   /* M - END mobile menu visibility - normal layout - */
 
@@ -2306,13 +2306,13 @@ p.with-badge .badge {
     grid-template-columns: 50% 50%;
   }
   .grid-3 {
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 50% 50%;
   }
   .grid-4 {
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
   }
   .grid-5 {
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
   }
   /* D - END grid layout - */
 }
@@ -2388,7 +2388,7 @@ p.with-badge .badge {
     grid-template-columns: 50% 50%;
   }
   .grid-3 {
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
   }
   .grid-4 {
     grid-template-columns: 25% 25% 25% 25%;
