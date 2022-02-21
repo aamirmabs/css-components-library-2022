@@ -23,6 +23,10 @@
   <!-- font-awesome icon kit -->
   <script src="https://kit.fontawesome.com/3e74c1a97c.js"
     crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" /> -->
 </head>
 
 <body>
@@ -252,7 +256,7 @@
             </div>
           </div>
           <div class="col-9 content-col">
-            <h1>Heading</h1>
+            <h1>Cards</h1>
 
             <!-- START Card containers section  -->
             <h2>Card containers</h2>
@@ -440,6 +444,113 @@
             </div>
             <!-- END Card containers section  -->
 
+            <!-- START product card -->
+            <h2>Product Cards</h2>
+            <p>Product cards can be created by using <code
+                class="language-plain">card</code> along with <code
+                class="language-plain">product-card</code>. The product image is
+              specified inside the <code
+                class="language-plain">product-image</code> and other properties
+              related to the product (such as the price, brand, rating etc.) are
+              listed in the <code
+                class="language-plain">product-description</code> section.
+            </p>
+            <div class="cards-container grid grid-3">
+              <!-- <div class="cards-container grid grid-2"> -->
+              <div class="card product-card">
+                <div class="product-image">
+                  <img src="/assets/images/placeholder-500x500.png">
+                </div>
+                <div class="product-description">
+                  <div class="title">
+                    <a href="#" title="Click for more information">
+                      Product Title
+                    </a>
+                  </div>
+                  <div class="brand">
+                    Brand: <a href="#" title="Click for more information">
+                      BrandName
+                    </a>
+                  </div>
+                  <div class="pricing-details">
+                    <span class="base-price scratched">
+                      £<span class="value">65</span>
+                    </span>
+                    &nbsp;
+                    <span class="discount-price">
+                      £<span class="value">65</span>
+                    </span>
+                    &nbsp;
+                    <span class="discount-rate">
+                      (<span class="value">65</span>% off)
+                    </span>
+                  </div>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <div class="buttons">
+                    <button class="btn btn-m btn-primary"><i
+                        class="fas fa-cart-plus"></i> Add
+                      to cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- - START code block - -->
+            <div class="code-block">
+              <pre>
+                <code class="language-html">
+                  &lt;div class="card product-card"&gt;
+                    &lt;div class="product-image"&gt;
+                      &lt;img src="/assets/images/placeholder-500x500.png"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="product-description"&gt;
+                      &lt;div class="title"&gt;
+                        &lt;a href="#" title="Click for more information"&gt;
+                          Product Title
+                        &lt;/a&gt;
+                      &lt;/div&gt;
+                      &lt;div class="brand"&gt;
+                        Brand: &lt;a href="#" title="Click for more information"&gt;
+                          BrandName
+                        &lt;/a&gt;
+                      &lt;/div&gt;
+                      &lt;div class="pricing-details"&gt;
+                        &lt;span class="base-price scratched"&gt;
+                          £&lt;span class="value"&gt;65&lt;/span&gt;
+                        &lt;/span&gt;
+                        &nbsp;
+                        &lt;span class="discount-price"&gt;
+                          £&lt;span class="value"&gt;65&lt;/span&gt;
+                        &lt;/span&gt;
+                        &nbsp;
+                        &lt;span class="discount-rate"&gt;
+                          (&lt;span class="value"&gt;65&lt;/span&gt;% off)
+                        &lt;/span&gt;
+                      &lt;/div&gt;
+                      &lt;div class="rating"&gt;
+                        &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+                        &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+                        &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+                        &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+                        &lt;i class="far fa-star"&gt;&lt;/i&gt;
+                      &lt;/div&gt;
+                      &lt;div class="buttons"&gt;
+                        &lt;button class="btn btn-m btn-primary"&gt;&lt;i class="fas fa-cart-plus"&gt;&lt;/i&gt; Add
+                          to cart&lt;/button&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                </code>
+              </pre>
+            </div>
+            <!-- - END code block - -->
+            <!-- END product card -->
+
             <!-- START Cards with badges section  -->
             <h2>Cards with badges</h2>
             <p>Paragraph <code class="language-plain">code</code>
@@ -510,8 +621,8 @@
               <div class="card text-card">
                 <div class="text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Commodi nobis veritatis praesentium repellendus corporis iste
-                  a.
+                  Commodi nobis veritatis praesentium repellendus corporis
+                  istea.
                 </div>
                 <div class="buttons">
                   <button class="btn btn-m btn-primary">

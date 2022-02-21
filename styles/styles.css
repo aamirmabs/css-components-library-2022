@@ -2118,12 +2118,18 @@ p.with-badge .badge {
 .card .overlay-bg-900 {
   background-color: var(--transparent-900);
 }
+
 /* --- START text-card --- */
 .cards-container .card.text-card {
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
   gap: 0px 0px;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-s);
+}
+.cards-container .card.text-card {
+  box-shadow: var(--shadow-m);
 }
 .card.text-card .text {
   grid-area: 1 / 1 / 2 / 2;
@@ -2189,13 +2195,140 @@ p.with-badge .badge {
 
 /* --- END text-card --- */
 
+/* --- START product card --- */
+
+.cards-container .card.product-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 0px 0px;
+  padding: 0px;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-s);
+}
+.cards-container .card.product-card:hover {
+  box-shadow: var(--shadow-m);
+}
+
+.card.product-card .product-image {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.card.product-card .product-description {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.card.product-card .overlay-container {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+/* overlay container */
+.card.product-card .overlay-container {
+  z-index: 10;
+  position: relative;
+}
+.card.product-card .overlay-container .badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.2rem 0.75rem;
+  border-radius: 50rem;
+  font-size: 0.75em;
+  font-weight: 700;
+  transition: var(--transition-medium);
+  box-shadow: var(--shadow-s);
+}
+.card.product-card .overlay-container .badge.badge-hover {
+  box-shadow: var(--shadow-s);
+}
+.card.product-card .overlay-container .badge.badge-hover:hover {
+  box-shadow: var(--shadow-m);
+}
+.card.product-card .overlay-container .wishlist {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  font-size: 1em;
+  font-weight: 300;
+  padding: 0.25rem;
+  color: var(--white-100);
+  transition: var(--transition-medium);
+}
+.card.product-card .overlay-container .wishlist:hover {
+  background-color: var(--gray-100);
+  color: var(--gray-900);
+  box-shadow: var(--shadow-m);
+}
+
+/* product image container */
+.card.product-card .product-image img {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* product description container */
+.card.product-card .product-description {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0.25rem;
+  text-align: center;
+  font-family: var(--heading-font);
+}
+
+.card.product-card .product-description .title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  transition: var(--transition-fast);
+}
+.card.product-card .product-description .title:hover {
+  transform: scale(1.1);
+}
+.card.product-card .product-description .brand {
+  margin: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.card.product-card .product-description .pricing-details {
+  margin: 0.25rem;
+  font-size: 1.3rem;
+}
+.card.product-card .product-description .pricing-details .scratched {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.card.product-card .product-description .pricing-details .base-price {
+  font-weight: 700;
+}
+.card.product-card .product-description .pricing-details .discount-price {
+  font-weight: 700;
+}
+.card.product-card .product-description .pricing-details .discount-rate {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+.card.product-card .product-description .rating {
+  font-size: 1.1rem;
+  margin: 0.25rem;
+  transition: var(--transition-fast);
+}
+.card.product-card .product-description .rating:hover {
+  transform: scale(1);
+}
+.card.product-card .product-description .buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0.25rem;
+  margin-top: auto;
+}
+/* --- END product card --- */
+
+/* --- START card with badges --- */
+
+/* --- END card with badges --- */
+
 /* -- END card  -- */
 
 /* - END cards css - */
-
-/* - START end utility classes - */
-
-/* - END end utility classes - */
 
 /* START MEDIA QUERIES */
 /* M - Extra small devices (phones, 600px and down) */
