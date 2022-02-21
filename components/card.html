@@ -553,9 +553,83 @@
 
             <!-- START Cards with badges section  -->
             <h2>Cards with badges</h2>
-            <p>Paragraph <code class="language-plain">code</code>
+            <p>All types of cards support badges and other elements that can be
+              overlaid on the card. Use the <code
+                class="language-plain">overlay-container</code> container inside
+              the <code class="language-plain">card</code> and place the
+              elements that need to be used inside this. In the examples below,
+              a badge has been used along with a wishlist heart icon.
             </p>
-            <div>
+            <div class="cards-container grid grid-3">
+              <div class="card product-card">
+                <div class="overlay-container">
+                  <div class="badge badge-hover badge-danger">
+                    New
+                  </div>
+                  <div class="wishlist">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="product-image">
+                  <img src="/assets/images/placeholder-500x500.png">
+                </div>
+                <div class="product-description">
+                  <div class="title">
+                    <a href="#" title="Click for more information">
+                      Product Title
+                    </a>
+                  </div>
+                  <div class="brand">
+                    Brand: <a href="#" title="Click for more information">
+                      BrandName
+                    </a>
+                  </div>
+                  <div class="pricing-details">
+                    <span class="base-price scratched">
+                      £<span class="value">65</span>
+                    </span>
+                    &nbsp;
+                    <span class="discount-price">
+                      £<span class="value">65</span>
+                    </span>
+                    &nbsp;
+                    <span class="discount-rate">
+                      (<span class="value">65</span>% off)
+                    </span>
+                  </div>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <div class="buttons">
+                    <button class="btn btn-m btn-primary"><i
+                        class="fas fa-cart-plus"></i> Add
+                      to cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card text-card">
+                <div class="overlay-container">
+                  <div class="badge badge-hover badge-danger">
+                    New
+                  </div>
+                  <div class="wishlist">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="text">Tenetur dignissimos incidunt ea enim alias
+                  suscipit pariatur natus ullam. Nulla eveniet libero
+                  dignissimos explicabo nisi!
+                </div>
+                <div class="buttons">
+                  <button class="btn btn-m btn-primary">
+                    Button
+                  </button>
+                </div>
+              </div>
             </div>
             <!-- - START code block - -->
             <div class="code-block">
