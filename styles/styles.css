@@ -2193,6 +2193,23 @@ p.with-badge .badge {
   color: var(--gray-900);
   box-shadow: var(--shadow-m);
 }
+.card.text-card .overlay-container .dismiss {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  width: 1em;
+  height: 1em;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  vertical-align: bottom;
+  color: var(--red-500);
+  background-color: var(--white-100);
+  transition: var(--transition-medium);
+}
+.card.text-card .overlay-container .dismiss:hover {
+  color: var(--red-300);
+}
 
 /* --- END text-card --- */
 
