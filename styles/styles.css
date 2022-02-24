@@ -658,6 +658,13 @@ a:hover {
 
 /* - START UTILITY CLASSES - */
 
+.no-shadow {
+  box-shadow: none !important;
+}
+.no-shadow:hover {
+  box-shadow: none !important;
+}
+
 /* -- START text sizes classes -- */
 /* uses important to overwrite the sizes set by other rules */
 .text-size-1 {

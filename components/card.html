@@ -910,16 +910,138 @@
             <!-- END Vertical/Horizontal cards section  -->
 
             <!-- START Cards with shadow section  -->
-            <h2>Cards with shadow</h2>
-            <p>Paragraph <code class="language-plain">code</code>
+            <h2>Cards shadows</h2>
+            <p>By default all cards have a shadow. In order to remove the
+              shadow, use the <code class="language-plain">no-shadow</code>
+              class.
             </p>
-            <div>
+            <div class="cards-container grid grid-2">
+              <div class="card text-card">
+                <div class="text">
+                  <h4>Default Text Card</h4>
+                  <p>Tenetur dignissimos incidunt ea enim alias
+                    suscipit pariatur natus ullam. Nulla eveniet libero
+                    dignissimos explicabo nisi!</p>
+                </div>
+                <div class="buttons">
+                  <button class="btn btn-m btn-primary">
+                    Button
+                  </button>
+                </div>
+              </div>
+              <div class="card text-card no-shadow">
+                <div class="text">
+                  <h4>Card with <code class="language-plain">.no-shadow</code>
+                  </h4>
+                  <p>Tenetur dignissimos incidunt ea enim alias
+                    suscipit pariatur natus ullam. Nulla eveniet libero
+                    dignissimos explicabo nisi!</p>
+                </div>
+                <div class="buttons">
+                  <button class="btn btn-m btn-primary">
+                    Button 1
+                  </button>
+                  <button class="btn btn-m btn-success">
+                    Button 2
+                  </button>
+                </div>
+              </div>
+              <div class="card product-card">
+                <div class="product-image">
+                  <img src="/assets/images/placeholder-500x500.png">
+                </div>
+                <div class="product-description">
+                  <div class="title">
+                    <a href="#" title="Click for more information">
+                      Default Card
+                    </a>
+                  </div>
+                  <div class="brand">
+                    Brand: <a href="#" title="Click for more information">
+                      BrandName
+                    </a>
+                  </div>
+                  <div class="pricing-details">
+                    <span class="base-price scratched">
+                      £<span class="value">65</span>
+                    </span>
+                    &nbsp;
+                    <span class="discount-price">
+                      £<span class="value">65</span>
+                    </span>
+                    &nbsp;
+                    <span class="discount-rate">
+                      (<span class="value">65</span>% off)
+                    </span>
+                  </div>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <div class="buttons">
+                    <button class="btn btn-m btn-primary"><i
+                        class="fas fa-cart-plus"></i> Add
+                      to cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card product-card no-shadow">
+                <div class="product-image">
+                  <img src="/assets/images/placeholder-500x500.png">
+                </div>
+                <div class="product-description">
+                  <div class="title">
+                    <a href="#" title="Click for more information">
+                      Card with <code class="language-plain">.no-shadow</code>
+                    </a>
+                  </div>
+                  <div class="brand">
+                    Brand: <a href="#" title="Click for more information">
+                      BrandName
+                    </a>
+                  </div>
+                  <div class="pricing-details">
+                    <span class="base-price scratched">
+                      £<span class="value">65</span>
+                    </span>
+                    &nbsp;
+                    <span class="discount-price">
+                      £<span class="value">65</span>
+                    </span>
+                    &nbsp;
+                    <span class="discount-rate">
+                      (<span class="value">65</span>% off)
+                    </span>
+                  </div>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <div class="buttons">
+                    <button class="btn btn-m btn-primary"><i
+                        class="fas fa-cart-plus"></i> Add
+                      to cart</button>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- - START code block - -->
             <div class="code-block">
               <pre>
                 <code class="language-html">
-                  &lt;
+                  &lt;div class="card text-card no-shadow"&gt;
+                    &lt;!-- card content here --&gt;
+                  &lt;/div&gt;
+                  &nbsp;
+                  &lt;div class="card product-card no-shadow"&gt;
+                    &lt;!-- card content here --&gt;
+                  &lt;/div&gt;
                 </code>
               </pre>
             </div>
