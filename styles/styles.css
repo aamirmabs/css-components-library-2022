@@ -2468,11 +2468,11 @@ p.with-badge .badge {
   position: absolute;
   top: 0.25rem;
   right: 0.25rem;
-  font-size: 1em;
   font-weight: 300;
   padding: 0.25rem;
   color: var(--white-100);
   transition: var(--transition-medium);
+  font-size: 1em;
 }
 .card.product-card-horizontal .overlay-container .wishlist:hover {
   background-color: var(--gray-100);
